@@ -116,7 +116,7 @@ namespace Presentation
                 newRow.Cells[i].ValueType = dgvSell.Columns[i].ValueType;
             }
             newRow.Cells[0].Value = selectedRow.Cells[0].Value;
-            newRow.Cells[1].Value = selectedRow.Cells[2].Value;
+            newRow.Cells[1].Value = selectedRow.Cells[1].Value;
             newRow.Cells[2].Value = selectedRow.Cells[4].Value;
             newRow.Cells[4].Value = selectedRow.Cells[4].Value;
             DataGridViewButtonCell quantityCell = new DataGridViewButtonCell();

@@ -51,7 +51,7 @@ namespace Presentation
             {
                 try
                 {
-                    int val = Prd.Insert(new ETTProduct(txtProductName.Text, (int)cbbCategoryID.SelectedValue, float.Parse(txtProcductPrice.Text), int.Parse(txtProductQuanty.Text)));
+                    int val = Prd.Insert(new ETTProduct(txtProductName.Text, (int)cbbCategoryID.SelectedValue, float.Parse(txtProcductPrice.Text), 0));
                     LoadData();
                     if (val == -1)
                         MessageBox.Show("Thêm dữ liệu không thành công, hãy kiểm tra lại!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);

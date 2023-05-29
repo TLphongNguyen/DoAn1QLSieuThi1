@@ -32,8 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnSearchNhacc = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.txtSearchNhacc = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,6 +43,8 @@
             this.btnAddNhaCC = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNhaCCId = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnSearchNhacc = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.txtSearchNhacc = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvNhaCC = new Guna.UI2.WinForms.Guna2DataGridView();
             this.clNhaCCID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clNhaCCName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,9 +71,202 @@
             this.guna2Panel1.Controls.Add(this.txtNhaCCId);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(410, 735);
+            this.guna2Panel1.Size = new System.Drawing.Size(402, 732);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(9, 258);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(104, 17);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Số điện thoại";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(9, 203);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 17);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Địa chỉ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(9, 146);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(139, 17);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Tên nhà cung cấp";
+            // 
+            // txtNhaCCName
+            // 
+            this.txtNhaCCName.BackColor = System.Drawing.Color.Transparent;
+            this.txtNhaCCName.BorderRadius = 20;
+            this.txtNhaCCName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNhaCCName.DefaultText = "";
+            this.txtNhaCCName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNhaCCName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNhaCCName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNhaCCName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNhaCCName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNhaCCName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNhaCCName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNhaCCName.Location = new System.Drawing.Point(191, 145);
+            this.txtNhaCCName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtNhaCCName.Name = "txtNhaCCName";
+            this.txtNhaCCName.PasswordChar = '\0';
+            this.txtNhaCCName.PlaceholderText = "";
+            this.txtNhaCCName.SelectedText = "";
+            this.txtNhaCCName.Size = new System.Drawing.Size(172, 39);
+            this.txtNhaCCName.TabIndex = 7;
+            // 
+            // txtNhaCCAddress
+            // 
+            this.txtNhaCCAddress.BackColor = System.Drawing.Color.Transparent;
+            this.txtNhaCCAddress.BorderRadius = 20;
+            this.txtNhaCCAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNhaCCAddress.DefaultText = "";
+            this.txtNhaCCAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNhaCCAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNhaCCAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNhaCCAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNhaCCAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNhaCCAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNhaCCAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNhaCCAddress.Location = new System.Drawing.Point(191, 204);
+            this.txtNhaCCAddress.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtNhaCCAddress.Name = "txtNhaCCAddress";
+            this.txtNhaCCAddress.PasswordChar = '\0';
+            this.txtNhaCCAddress.PlaceholderText = "";
+            this.txtNhaCCAddress.SelectedText = "";
+            this.txtNhaCCAddress.Size = new System.Drawing.Size(172, 39);
+            this.txtNhaCCAddress.TabIndex = 6;
+            // 
+            // txtNhaCCPhone
+            // 
+            this.txtNhaCCPhone.BackColor = System.Drawing.Color.Transparent;
+            this.txtNhaCCPhone.BorderRadius = 20;
+            this.txtNhaCCPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNhaCCPhone.DefaultText = "";
+            this.txtNhaCCPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNhaCCPhone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNhaCCPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNhaCCPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNhaCCPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNhaCCPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNhaCCPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNhaCCPhone.Location = new System.Drawing.Point(191, 259);
+            this.txtNhaCCPhone.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtNhaCCPhone.Name = "txtNhaCCPhone";
+            this.txtNhaCCPhone.PasswordChar = '\0';
+            this.txtNhaCCPhone.PlaceholderText = "";
+            this.txtNhaCCPhone.SelectedText = "";
+            this.txtNhaCCPhone.Size = new System.Drawing.Size(172, 39);
+            this.txtNhaCCPhone.TabIndex = 5;
+            // 
+            // btnUpdateNhaCC
+            // 
+            this.btnUpdateNhaCC.BorderRadius = 20;
+            this.btnUpdateNhaCC.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateNhaCC.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateNhaCC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdateNhaCC.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdateNhaCC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUpdateNhaCC.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(156)))), ((int)(((byte)(133)))));
+            this.btnUpdateNhaCC.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(148)))));
+            this.btnUpdateNhaCC.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnUpdateNhaCC.ForeColor = System.Drawing.Color.Black;
+            this.btnUpdateNhaCC.Location = new System.Drawing.Point(198, 394);
+            this.btnUpdateNhaCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateNhaCC.Name = "btnUpdateNhaCC";
+            this.btnUpdateNhaCC.Size = new System.Drawing.Size(165, 54);
+            this.btnUpdateNhaCC.TabIndex = 4;
+            this.btnUpdateNhaCC.Text = "Sửa thông tin";
+            this.btnUpdateNhaCC.Click += new System.EventHandler(this.btnUpdateNhaCC_Click);
+            // 
+            // btnDeleteNhaCC
+            // 
+            this.btnDeleteNhaCC.BorderRadius = 20;
+            this.btnDeleteNhaCC.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteNhaCC.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteNhaCC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDeleteNhaCC.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDeleteNhaCC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDeleteNhaCC.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(156)))), ((int)(((byte)(133)))));
+            this.btnDeleteNhaCC.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(148)))));
+            this.btnDeleteNhaCC.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDeleteNhaCC.ForeColor = System.Drawing.Color.Black;
+            this.btnDeleteNhaCC.Location = new System.Drawing.Point(106, 482);
+            this.btnDeleteNhaCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteNhaCC.Name = "btnDeleteNhaCC";
+            this.btnDeleteNhaCC.Size = new System.Drawing.Size(165, 54);
+            this.btnDeleteNhaCC.TabIndex = 3;
+            this.btnDeleteNhaCC.Text = "Xóa thông tin";
+            this.btnDeleteNhaCC.Click += new System.EventHandler(this.btnDeleteNhaCC_Click);
+            // 
+            // btnAddNhaCC
+            // 
+            this.btnAddNhaCC.BorderRadius = 20;
+            this.btnAddNhaCC.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNhaCC.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNhaCC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddNhaCC.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddNhaCC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddNhaCC.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(156)))), ((int)(((byte)(133)))));
+            this.btnAddNhaCC.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(148)))));
+            this.btnAddNhaCC.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddNhaCC.ForeColor = System.Drawing.Color.Black;
+            this.btnAddNhaCC.Location = new System.Drawing.Point(10, 394);
+            this.btnAddNhaCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddNhaCC.Name = "btnAddNhaCC";
+            this.btnAddNhaCC.Size = new System.Drawing.Size(165, 54);
+            this.btnAddNhaCC.TabIndex = 2;
+            this.btnAddNhaCC.Text = "Lưu thông tin";
+            this.btnAddNhaCC.Click += new System.EventHandler(this.btnAddNhaCC_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(9, 91);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Mã nhà cung cấp";
+            // 
+            // txtNhaCCId
+            // 
+            this.txtNhaCCId.BackColor = System.Drawing.Color.Transparent;
+            this.txtNhaCCId.BorderRadius = 20;
+            this.txtNhaCCId.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNhaCCId.DefaultText = "";
+            this.txtNhaCCId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNhaCCId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNhaCCId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNhaCCId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNhaCCId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNhaCCId.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNhaCCId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNhaCCId.Location = new System.Drawing.Point(191, 89);
+            this.txtNhaCCId.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtNhaCCId.Name = "txtNhaCCId";
+            this.txtNhaCCId.PasswordChar = '\0';
+            this.txtNhaCCId.PlaceholderText = "";
+            this.txtNhaCCId.SelectedText = "";
+            this.txtNhaCCId.Size = new System.Drawing.Size(172, 39);
+            this.txtNhaCCId.TabIndex = 0;
             // 
             // btnSearchNhacc
             // 
@@ -87,9 +280,10 @@
             this.btnSearchNhacc.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(148)))));
             this.btnSearchNhacc.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSearchNhacc.ForeColor = System.Drawing.Color.Black;
-            this.btnSearchNhacc.Location = new System.Drawing.Point(933, 51);
+            this.btnSearchNhacc.Location = new System.Drawing.Point(797, 93);
+            this.btnSearchNhacc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearchNhacc.Name = "btnSearchNhacc";
-            this.btnSearchNhacc.Size = new System.Drawing.Size(154, 45);
+            this.btnSearchNhacc.Size = new System.Drawing.Size(116, 37);
             this.btnSearchNhacc.TabIndex = 12;
             this.btnSearchNhacc.Text = "Tìm Kiếm";
             this.btnSearchNhacc.Click += new System.EventHandler(this.btnSearchNhacc_Click);
@@ -107,199 +301,14 @@
             this.txtSearchNhacc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearchNhacc.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSearchNhacc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchNhacc.Location = new System.Drawing.Point(445, 48);
-            this.txtSearchNhacc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearchNhacc.Location = new System.Drawing.Point(455, 91);
+            this.txtSearchNhacc.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtSearchNhacc.Name = "txtSearchNhacc";
             this.txtSearchNhacc.PasswordChar = '\0';
             this.txtSearchNhacc.PlaceholderText = "Nhập thông tin tìm kiếm";
             this.txtSearchNhacc.SelectedText = "";
-            this.txtSearchNhacc.Size = new System.Drawing.Size(326, 48);
+            this.txtSearchNhacc.Size = new System.Drawing.Size(244, 39);
             this.txtSearchNhacc.TabIndex = 11;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 318);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 20);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Số điện thoại";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 250);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 20);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Địa chỉ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 180);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 20);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Tên nhà CC";
-            // 
-            // txtNhaCCName
-            // 
-            this.txtNhaCCName.BackColor = System.Drawing.Color.Transparent;
-            this.txtNhaCCName.BorderRadius = 20;
-            this.txtNhaCCName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNhaCCName.DefaultText = "";
-            this.txtNhaCCName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNhaCCName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNhaCCName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNhaCCName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNhaCCName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNhaCCName.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNhaCCName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNhaCCName.Location = new System.Drawing.Point(148, 165);
-            this.txtNhaCCName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNhaCCName.Name = "txtNhaCCName";
-            this.txtNhaCCName.PasswordChar = '\0';
-            this.txtNhaCCName.PlaceholderText = "";
-            this.txtNhaCCName.SelectedText = "";
-            this.txtNhaCCName.Size = new System.Drawing.Size(229, 48);
-            this.txtNhaCCName.TabIndex = 7;
-            // 
-            // txtNhaCCAddress
-            // 
-            this.txtNhaCCAddress.BackColor = System.Drawing.Color.Transparent;
-            this.txtNhaCCAddress.BorderRadius = 20;
-            this.txtNhaCCAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNhaCCAddress.DefaultText = "";
-            this.txtNhaCCAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNhaCCAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNhaCCAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNhaCCAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNhaCCAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNhaCCAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNhaCCAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNhaCCAddress.Location = new System.Drawing.Point(148, 237);
-            this.txtNhaCCAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNhaCCAddress.Name = "txtNhaCCAddress";
-            this.txtNhaCCAddress.PasswordChar = '\0';
-            this.txtNhaCCAddress.PlaceholderText = "";
-            this.txtNhaCCAddress.SelectedText = "";
-            this.txtNhaCCAddress.Size = new System.Drawing.Size(229, 48);
-            this.txtNhaCCAddress.TabIndex = 6;
-            // 
-            // txtNhaCCPhone
-            // 
-            this.txtNhaCCPhone.BackColor = System.Drawing.Color.Transparent;
-            this.txtNhaCCPhone.BorderRadius = 20;
-            this.txtNhaCCPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNhaCCPhone.DefaultText = "";
-            this.txtNhaCCPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNhaCCPhone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNhaCCPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNhaCCPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNhaCCPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNhaCCPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNhaCCPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNhaCCPhone.Location = new System.Drawing.Point(148, 305);
-            this.txtNhaCCPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNhaCCPhone.Name = "txtNhaCCPhone";
-            this.txtNhaCCPhone.PasswordChar = '\0';
-            this.txtNhaCCPhone.PlaceholderText = "";
-            this.txtNhaCCPhone.SelectedText = "";
-            this.txtNhaCCPhone.Size = new System.Drawing.Size(229, 48);
-            this.txtNhaCCPhone.TabIndex = 5;
-            // 
-            // btnUpdateNhaCC
-            // 
-            this.btnUpdateNhaCC.BorderRadius = 20;
-            this.btnUpdateNhaCC.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdateNhaCC.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdateNhaCC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUpdateNhaCC.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUpdateNhaCC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUpdateNhaCC.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(156)))), ((int)(((byte)(133)))));
-            this.btnUpdateNhaCC.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(148)))));
-            this.btnUpdateNhaCC.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnUpdateNhaCC.ForeColor = System.Drawing.Color.Black;
-            this.btnUpdateNhaCC.Location = new System.Drawing.Point(223, 412);
-            this.btnUpdateNhaCC.Name = "btnUpdateNhaCC";
-            this.btnUpdateNhaCC.Size = new System.Drawing.Size(154, 45);
-            this.btnUpdateNhaCC.TabIndex = 4;
-            this.btnUpdateNhaCC.Text = "Sửa thông tin";
-            this.btnUpdateNhaCC.Click += new System.EventHandler(this.btnUpdateNhaCC_Click);
-            // 
-            // btnDeleteNhaCC
-            // 
-            this.btnDeleteNhaCC.BorderRadius = 20;
-            this.btnDeleteNhaCC.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDeleteNhaCC.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDeleteNhaCC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDeleteNhaCC.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDeleteNhaCC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDeleteNhaCC.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(156)))), ((int)(((byte)(133)))));
-            this.btnDeleteNhaCC.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(148)))));
-            this.btnDeleteNhaCC.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnDeleteNhaCC.ForeColor = System.Drawing.Color.Black;
-            this.btnDeleteNhaCC.Location = new System.Drawing.Point(127, 496);
-            this.btnDeleteNhaCC.Name = "btnDeleteNhaCC";
-            this.btnDeleteNhaCC.Size = new System.Drawing.Size(154, 45);
-            this.btnDeleteNhaCC.TabIndex = 3;
-            this.btnDeleteNhaCC.Text = "Xóa thông tin";
-            this.btnDeleteNhaCC.Click += new System.EventHandler(this.btnDeleteNhaCC_Click);
-            // 
-            // btnAddNhaCC
-            // 
-            this.btnAddNhaCC.BorderRadius = 20;
-            this.btnAddNhaCC.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNhaCC.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNhaCC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddNhaCC.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddNhaCC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddNhaCC.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(156)))), ((int)(((byte)(133)))));
-            this.btnAddNhaCC.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(148)))));
-            this.btnAddNhaCC.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAddNhaCC.ForeColor = System.Drawing.Color.Black;
-            this.btnAddNhaCC.Location = new System.Drawing.Point(16, 412);
-            this.btnAddNhaCC.Name = "btnAddNhaCC";
-            this.btnAddNhaCC.Size = new System.Drawing.Size(154, 45);
-            this.btnAddNhaCC.TabIndex = 2;
-            this.btnAddNhaCC.Text = "Lưu thông tin";
-            this.btnAddNhaCC.Click += new System.EventHandler(this.btnAddNhaCC_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 112);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Mã nhà CC";
-            // 
-            // txtNhaCCId
-            // 
-            this.txtNhaCCId.BackColor = System.Drawing.Color.Transparent;
-            this.txtNhaCCId.BorderRadius = 20;
-            this.txtNhaCCId.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNhaCCId.DefaultText = "";
-            this.txtNhaCCId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNhaCCId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNhaCCId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNhaCCId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNhaCCId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNhaCCId.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNhaCCId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNhaCCId.Location = new System.Drawing.Point(148, 96);
-            this.txtNhaCCId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNhaCCId.Name = "txtNhaCCId";
-            this.txtNhaCCId.PasswordChar = '\0';
-            this.txtNhaCCId.PlaceholderText = "";
-            this.txtNhaCCId.SelectedText = "";
-            this.txtNhaCCId.Size = new System.Drawing.Size(229, 48);
-            this.txtNhaCCId.TabIndex = 0;
             // 
             // dgvNhaCC
             // 
@@ -329,13 +338,14 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvNhaCC.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvNhaCC.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvNhaCC.Location = new System.Drawing.Point(445, 180);
+            this.dgvNhaCC.Location = new System.Drawing.Point(455, 163);
+            this.dgvNhaCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvNhaCC.Name = "dgvNhaCC";
             this.dgvNhaCC.ReadOnly = true;
             this.dgvNhaCC.RowHeadersVisible = false;
             this.dgvNhaCC.RowHeadersWidth = 51;
             this.dgvNhaCC.RowTemplate.Height = 24;
-            this.dgvNhaCC.Size = new System.Drawing.Size(670, 529);
+            this.dgvNhaCC.Size = new System.Drawing.Size(590, 532);
             this.dgvNhaCC.TabIndex = 1;
             this.dgvNhaCC.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvNhaCC.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -396,24 +406,26 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(638, 130);
+            this.label5.Location = new System.Drawing.Point(451, 33);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(284, 29);
+            this.label5.Size = new System.Drawing.Size(233, 24);
             this.label5.TabIndex = 13;
             this.label5.Text = "Thông tin nhà cung cấp";
             // 
             // FrmNhaCC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
-            this.ClientSize = new System.Drawing.Size(1152, 735);
+            this.ClientSize = new System.Drawing.Size(1086, 732);
             this.Controls.Add(this.btnSearchNhacc);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtSearchNhacc);
             this.Controls.Add(this.dgvNhaCC);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmNhaCC";
             this.Text = "FrmNhaCC";
             this.Load += new System.EventHandler(this.FrmNhaCC_Load);

@@ -89,5 +89,10 @@ namespace Presentation
 
 
         }
+
+        private void btnNhapHang_Click(object sender, EventArgs e)
+        {
+            OpenchildForm(new FrmImportProduct());
+        }
     }
 }

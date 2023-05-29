@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSetting = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnLogOut = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnEmploiee = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnNhapHang = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -37,16 +38,15 @@
             this.btnNhaCC = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pnlBody = new System.Windows.Forms.Panel();
-            this.lbName = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.LbTime = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnExit = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.LbTime = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbName = new System.Windows.Forms.Label();
+            this.btnExit = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.pnlBody = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,9 +60,11 @@
             this.panel1.Controls.Add(this.btnCategory);
             this.panel1.Controls.Add(this.btnNhaCC);
             this.panel1.Controls.Add(this.guna2GradientButton1);
-            this.panel1.Location = new System.Drawing.Point(0, -1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 58);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(228, 786);
+            this.panel1.Size = new System.Drawing.Size(276, 901);
             this.panel1.TabIndex = 7;
             // 
             // btnSetting
@@ -83,12 +85,24 @@
             this.btnSetting.Image = global::Presentation.Properties.Resources._5027825_cog_gear_setting_icon;
             this.btnSetting.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSetting.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnSetting.Location = new System.Drawing.Point(0, 630);
+            this.btnSetting.Location = new System.Drawing.Point(3, 681);
+            this.btnSetting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(221, 63);
+            this.btnSetting.Size = new System.Drawing.Size(273, 86);
             this.btnSetting.TabIndex = 16;
             this.btnSetting.Text = "Thiết lập";
             this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentation.Properties.Resources.logovm;
+            this.pictureBox1.Location = new System.Drawing.Point(48, 17);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(163, 94);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // BtnLogOut
             // 
@@ -108,9 +122,10 @@
             this.BtnLogOut.Image = global::Presentation.Properties.Resources._9104240_entrance_enter_sign_in_login_door_icon;
             this.BtnLogOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.BtnLogOut.ImageSize = new System.Drawing.Size(30, 30);
-            this.BtnLogOut.Location = new System.Drawing.Point(0, 707);
+            this.BtnLogOut.Location = new System.Drawing.Point(0, 801);
+            this.BtnLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnLogOut.Name = "BtnLogOut";
-            this.BtnLogOut.Size = new System.Drawing.Size(221, 63);
+            this.BtnLogOut.Size = new System.Drawing.Size(273, 86);
             this.BtnLogOut.TabIndex = 6;
             this.BtnLogOut.Text = "Thoát";
             this.BtnLogOut.Click += new System.EventHandler(this.BtnLogOut_Click);
@@ -133,9 +148,10 @@
             this.btnEmploiee.Image = global::Presentation.Properties.Resources.nhanvien;
             this.btnEmploiee.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnEmploiee.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnEmploiee.Location = new System.Drawing.Point(3, 294);
+            this.btnEmploiee.Location = new System.Drawing.Point(4, 362);
+            this.btnEmploiee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEmploiee.Name = "btnEmploiee";
-            this.btnEmploiee.Size = new System.Drawing.Size(221, 63);
+            this.btnEmploiee.Size = new System.Drawing.Size(273, 86);
             this.btnEmploiee.TabIndex = 5;
             this.btnEmploiee.Text = "Quản lí nhân viên";
             this.btnEmploiee.Click += new System.EventHandler(this.btnEmploiee_Click);
@@ -158,11 +174,13 @@
             this.btnNhapHang.Image = global::Presentation.Properties.Resources._7811684_warehouse_supply_cargo_distribution_logistic_icon;
             this.btnNhapHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnNhapHang.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnNhapHang.Location = new System.Drawing.Point(3, 452);
+            this.btnNhapHang.Location = new System.Drawing.Point(0, 577);
+            this.btnNhapHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNhapHang.Name = "btnNhapHang";
-            this.btnNhapHang.Size = new System.Drawing.Size(221, 63);
+            this.btnNhapHang.Size = new System.Drawing.Size(273, 86);
             this.btnNhapHang.TabIndex = 4;
             this.btnNhapHang.Text = "Nhập hàng";
+            this.btnNhapHang.Click += new System.EventHandler(this.btnNhapHang_Click);
             // 
             // btnCategory
             // 
@@ -182,9 +200,10 @@
             this.btnCategory.Image = global::Presentation.Properties.Resources.product;
             this.btnCategory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCategory.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCategory.Location = new System.Drawing.Point(4, 212);
+            this.btnCategory.Location = new System.Drawing.Point(4, 258);
+            this.btnCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCategory.Name = "btnCategory";
-            this.btnCategory.Size = new System.Drawing.Size(221, 63);
+            this.btnCategory.Size = new System.Drawing.Size(273, 86);
             this.btnCategory.TabIndex = 3;
             this.btnCategory.Text = "Loại hàng";
             this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
@@ -207,9 +226,10 @@
             this.btnNhaCC.Image = global::Presentation.Properties.Resources._2530816_align_employee_general_human_human_list_icon;
             this.btnNhaCC.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnNhaCC.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnNhaCC.Location = new System.Drawing.Point(3, 374);
+            this.btnNhaCC.Location = new System.Drawing.Point(4, 470);
+            this.btnNhaCC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNhaCC.Name = "btnNhaCC";
-            this.btnNhaCC.Size = new System.Drawing.Size(221, 63);
+            this.btnNhaCC.Size = new System.Drawing.Size(273, 86);
             this.btnNhaCC.TabIndex = 1;
             this.btnNhaCC.Text = "Nhà cung cấp";
             this.btnNhaCC.Click += new System.EventHandler(this.btnNhaCC_Click);
@@ -233,9 +253,10 @@
             this.guna2GradientButton1.Image = global::Presentation.Properties.Resources._653261_chart_analysis_analytics_charts_diagram_icon;
             this.guna2GradientButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2GradientButton1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2GradientButton1.Location = new System.Drawing.Point(0, 124);
+            this.guna2GradientButton1.Location = new System.Drawing.Point(4, 143);
+            this.guna2GradientButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(221, 69);
+            this.guna2GradientButton1.Size = new System.Drawing.Size(273, 92);
             this.guna2GradientButton1.TabIndex = 0;
             this.guna2GradientButton1.Text = "Thống kê";
             this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
@@ -248,60 +269,56 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.lbName);
             this.panel2.Controls.Add(this.btnExit);
-            this.panel2.Location = new System.Drawing.Point(227, 1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1152, 58);
+            this.panel2.Size = new System.Drawing.Size(1724, 58);
             this.panel2.TabIndex = 8;
             // 
-            // pnlBody
+            // label1
             // 
-            this.pnlBody.Location = new System.Drawing.Point(227, 65);
-            this.pnlBody.Name = "pnlBody";
-            this.pnlBody.Size = new System.Drawing.Size(1152, 720);
-            this.pnlBody.TabIndex = 10;
-            // 
-            // lbName
-            // 
-            this.lbName.AutoSize = true;
-            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lbName.Location = new System.Drawing.Point(172, 21);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(61, 20);
-            this.lbName.TabIndex = 3;
-            this.lbName.Text = "Admin";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label2.Location = new System.Drawing.Point(37, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "xin chào";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label1.Location = new System.Drawing.Point(441, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(20, 20);
+            this.label1.TabIndex = 6;
+            this.label1.Text = " |";
             // 
             // LbTime
             // 
             this.LbTime.AutoSize = true;
             this.LbTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.LbTime.Location = new System.Drawing.Point(711, 18);
+            this.LbTime.Location = new System.Drawing.Point(808, 18);
             this.LbTime.Name = "LbTime";
             this.LbTime.Size = new System.Drawing.Size(59, 20);
             this.LbTime.TabIndex = 5;
             this.LbTime.Text = "label1";
             // 
-            // pictureBox1
+            // label2
             // 
-            this.pictureBox1.Image = global::Presentation.Properties.Resources.logovm;
-            this.pictureBox1.Location = new System.Drawing.Point(32, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(163, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label2.Location = new System.Drawing.Point(347, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 20);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "xin chào";
+            // 
+            // lbName
+            // 
+            this.lbName.AutoSize = true;
+            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lbName.Location = new System.Drawing.Point(481, 18);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(61, 20);
+            this.lbName.TabIndex = 3;
+            this.lbName.Text = "Admin";
             // 
             // btnExit
             // 
@@ -316,40 +333,40 @@
             this.btnExit.ForeColor = System.Drawing.Color.Black;
             this.btnExit.Image = global::Presentation.Properties.Resources._1282956_close_delete_deny_no_out_icon__1_;
             this.btnExit.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnExit.Location = new System.Drawing.Point(1083, 3);
+            this.btnExit.Location = new System.Drawing.Point(1621, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(66, 52);
+            this.btnExit.Size = new System.Drawing.Size(67, 52);
             this.btnExit.TabIndex = 2;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // label1
+            // pnlBody
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(132, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 20);
-            this.label1.TabIndex = 6;
-            this.label1.Text = " |";
+            this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBody.Location = new System.Drawing.Point(276, 58);
+            this.pnlBody.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlBody.Name = "pnlBody";
+            this.pnlBody.Size = new System.Drawing.Size(1448, 901);
+            this.pnlBody.TabIndex = 10;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1380, 785);
+            this.ClientSize = new System.Drawing.Size(1724, 959);
             this.Controls.Add(this.pnlBody);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.Load += new System.EventHandler(this.Main_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

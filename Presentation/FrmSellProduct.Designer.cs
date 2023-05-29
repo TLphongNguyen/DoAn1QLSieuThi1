@@ -41,18 +41,17 @@
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtSellSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvProducts = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.clProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clCategoryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clQuanty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.lbPrice = new System.Windows.Forms.Label();
             this.lbPriceText = new System.Windows.Forms.Label();
             this.btnPay = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnDestroy = new Guna.UI2.WinForms.Guna2GradientButton();
             this.dgvSell = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.clProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clCategoryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clQuanty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clPrdID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +59,7 @@
             this.clSum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clGiam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clTang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -76,8 +76,9 @@
             this.guna2Panel1.Controls.Add(this.dgvProducts);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(624, 700);
+            this.guna2Panel1.Size = new System.Drawing.Size(471, 732);
             this.guna2Panel1.TabIndex = 0;
             // 
             // btnReload
@@ -92,9 +93,10 @@
             this.btnReload.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(233)))), ((int)(((byte)(176)))));
             this.btnReload.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnReload.ForeColor = System.Drawing.Color.Black;
-            this.btnReload.Location = new System.Drawing.Point(471, 151);
+            this.btnReload.Location = new System.Drawing.Point(353, 123);
+            this.btnReload.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(130, 45);
+            this.btnReload.Size = new System.Drawing.Size(98, 37);
             this.btnReload.TabIndex = 9;
             this.btnReload.Text = "làm mới";
             this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
@@ -103,9 +105,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(42, 110);
+            this.label4.Location = new System.Drawing.Point(32, 89);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 20);
+            this.label4.Size = new System.Drawing.Size(106, 17);
             this.label4.TabIndex = 8;
             this.label4.Text = "tên sản phẩm";
             // 
@@ -113,9 +116,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(268, 42);
+            this.label2.Location = new System.Drawing.Point(201, 34);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 29);
+            this.label2.Size = new System.Drawing.Size(68, 24);
             this.label2.TabIndex = 7;
             this.label2.Text = "bộ lọc";
             // 
@@ -131,9 +135,10 @@
             this.guna2GradientButton3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(233)))), ((int)(((byte)(176)))));
             this.guna2GradientButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GradientButton3.ForeColor = System.Drawing.Color.Black;
-            this.guna2GradientButton3.Location = new System.Drawing.Point(313, 151);
+            this.guna2GradientButton3.Location = new System.Drawing.Point(235, 123);
+            this.guna2GradientButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2GradientButton3.Name = "guna2GradientButton3";
-            this.guna2GradientButton3.Size = new System.Drawing.Size(130, 45);
+            this.guna2GradientButton3.Size = new System.Drawing.Size(98, 37);
             this.guna2GradientButton3.TabIndex = 6;
             this.guna2GradientButton3.Text = "tìm kiếm";
             this.guna2GradientButton3.Click += new System.EventHandler(this.guna2GradientButton3_Click);
@@ -153,13 +158,13 @@
             this.txtSellSearch.IconRight = global::Presentation.Properties.Resources._2303114_explore_lense_magnifier_search_searching_icon;
             this.txtSellSearch.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.txtSellSearch.IconRightSize = new System.Drawing.Size(30, 30);
-            this.txtSellSearch.Location = new System.Drawing.Point(46, 146);
-            this.txtSellSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSellSearch.Location = new System.Drawing.Point(34, 119);
+            this.txtSellSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtSellSearch.Name = "txtSellSearch";
             this.txtSellSearch.PasswordChar = '\0';
             this.txtSellSearch.PlaceholderText = "tìm kiếm";
             this.txtSellSearch.SelectedText = "";
-            this.txtSellSearch.Size = new System.Drawing.Size(252, 50);
+            this.txtSellSearch.Size = new System.Drawing.Size(189, 41);
             this.txtSellSearch.TabIndex = 5;
             // 
             // dgvProducts
@@ -191,12 +196,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProducts.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProducts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvProducts.Location = new System.Drawing.Point(46, 252);
+            this.dgvProducts.Location = new System.Drawing.Point(34, 205);
+            this.dgvProducts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvProducts.Name = "dgvProducts";
             this.dgvProducts.RowHeadersVisible = false;
             this.dgvProducts.RowHeadersWidth = 51;
             this.dgvProducts.RowTemplate.Height = 24;
-            this.dgvProducts.Size = new System.Drawing.Size(530, 436);
+            this.dgvProducts.Size = new System.Drawing.Size(398, 432);
             this.dgvProducts.TabIndex = 0;
             this.dgvProducts.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvProducts.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -221,6 +227,41 @@
             this.dgvProducts.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducts_CellClick);
             // 
+            // clProductID
+            // 
+            this.clProductID.DataPropertyName = "MaSanPham";
+            this.clProductID.HeaderText = "mã sản phẩm";
+            this.clProductID.MinimumWidth = 6;
+            this.clProductID.Name = "clProductID";
+            // 
+            // clProductName
+            // 
+            this.clProductName.DataPropertyName = "TenSanPham";
+            this.clProductName.HeaderText = "tên sản phẩm";
+            this.clProductName.MinimumWidth = 6;
+            this.clProductName.Name = "clProductName";
+            // 
+            // clCategoryID
+            // 
+            this.clCategoryID.DataPropertyName = "TenLoaiHang";
+            this.clCategoryID.HeaderText = "loại sản phẩm";
+            this.clCategoryID.MinimumWidth = 6;
+            this.clCategoryID.Name = "clCategoryID";
+            // 
+            // clQuanty
+            // 
+            this.clQuanty.DataPropertyName = "SoLuong";
+            this.clQuanty.HeaderText = "số lượng";
+            this.clQuanty.MinimumWidth = 6;
+            this.clQuanty.Name = "clQuanty";
+            // 
+            // clProductPrice
+            // 
+            this.clProductPrice.DataPropertyName = "GiaBan";
+            this.clProductPrice.HeaderText = "giá bán";
+            this.clProductPrice.MinimumWidth = 6;
+            this.clProductPrice.Name = "clProductPrice";
+            // 
             // guna2Panel2
             // 
             this.guna2Panel2.Controls.Add(this.lbPrice);
@@ -230,18 +271,20 @@
             this.guna2Panel2.Controls.Add(this.dgvSell);
             this.guna2Panel2.Controls.Add(this.label1);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2Panel2.Location = new System.Drawing.Point(623, 0);
+            this.guna2Panel2.Location = new System.Drawing.Point(475, 0);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(524, 700);
+            this.guna2Panel2.Size = new System.Drawing.Size(551, 732);
             this.guna2Panel2.TabIndex = 1;
             // 
             // lbPrice
             // 
             this.lbPrice.AutoSize = true;
             this.lbPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrice.Location = new System.Drawing.Point(100, 615);
+            this.lbPrice.Location = new System.Drawing.Point(75, 571);
+            this.lbPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(24, 25);
+            this.lbPrice.Size = new System.Drawing.Size(19, 20);
             this.lbPrice.TabIndex = 15;
             this.lbPrice.Text = "0";
             // 
@@ -249,9 +292,10 @@
             // 
             this.lbPriceText.AutoSize = true;
             this.lbPriceText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPriceText.Location = new System.Drawing.Point(13, 615);
+            this.lbPriceText.Location = new System.Drawing.Point(10, 571);
+            this.lbPriceText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPriceText.Name = "lbPriceText";
-            this.lbPriceText.Size = new System.Drawing.Size(81, 25);
+            this.lbPriceText.Size = new System.Drawing.Size(64, 20);
             this.lbPriceText.TabIndex = 14;
             this.lbPriceText.Text = "Tổng : ";
             // 
@@ -267,9 +311,10 @@
             this.btnPay.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(233)))), ((int)(((byte)(176)))));
             this.btnPay.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnPay.ForeColor = System.Drawing.Color.Black;
-            this.btnPay.Location = new System.Drawing.Point(368, 615);
+            this.btnPay.Location = new System.Drawing.Point(418, 554);
+            this.btnPay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(130, 45);
+            this.btnPay.Size = new System.Drawing.Size(98, 37);
             this.btnPay.TabIndex = 10;
             this.btnPay.Text = "Thanh toán";
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
@@ -286,9 +331,10 @@
             this.btnDestroy.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(233)))), ((int)(((byte)(176)))));
             this.btnDestroy.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDestroy.ForeColor = System.Drawing.Color.Black;
-            this.btnDestroy.Location = new System.Drawing.Point(200, 615);
+            this.btnDestroy.Location = new System.Drawing.Point(243, 554);
+            this.btnDestroy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDestroy.Name = "btnDestroy";
-            this.btnDestroy.Size = new System.Drawing.Size(130, 45);
+            this.btnDestroy.Size = new System.Drawing.Size(98, 37);
             this.btnDestroy.TabIndex = 11;
             this.btnDestroy.Text = "Hủy";
             this.btnDestroy.Click += new System.EventHandler(this.btnDestroy_Click);
@@ -325,12 +371,13 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvSell.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvSell.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvSell.Location = new System.Drawing.Point(18, 126);
+            this.dgvSell.Location = new System.Drawing.Point(14, 102);
+            this.dgvSell.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvSell.Name = "dgvSell";
             this.dgvSell.RowHeadersVisible = false;
             this.dgvSell.RowHeadersWidth = 51;
             this.dgvSell.RowTemplate.Height = 24;
-            this.dgvSell.Size = new System.Drawing.Size(480, 426);
+            this.dgvSell.Size = new System.Drawing.Size(511, 366);
             this.dgvSell.TabIndex = 0;
             this.dgvSell.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvSell.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -355,51 +402,6 @@
             this.dgvSell.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvSell.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSell_CellContentClick);
             this.dgvSell.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvSell_RowStateChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(163, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(214, 29);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "thông tin hóa đơn";
-            // 
-            // clProductID
-            // 
-            this.clProductID.DataPropertyName = "MaSanPham";
-            this.clProductID.HeaderText = "mã sản phẩm";
-            this.clProductID.MinimumWidth = 6;
-            this.clProductID.Name = "clProductID";
-            // 
-            // clProductName
-            // 
-            this.clProductName.DataPropertyName = "TenSanPham";
-            this.clProductName.HeaderText = "tên sản phẩm";
-            this.clProductName.MinimumWidth = 6;
-            this.clProductName.Name = "clProductName";
-            // 
-            // clCategoryID
-            // 
-            this.clCategoryID.DataPropertyName = "TenLoaiHang";
-            this.clCategoryID.HeaderText = "loại sản phẩm";
-            this.clCategoryID.MinimumWidth = 6;
-            this.clCategoryID.Name = "clCategoryID";
-            // 
-            // clQuanty
-            // 
-            this.clQuanty.DataPropertyName = "SoLuong";
-            this.clQuanty.HeaderText = "số lượng";
-            this.clQuanty.MinimumWidth = 6;
-            this.clQuanty.Name = "clQuanty";
-            // 
-            // clProductPrice
-            // 
-            this.clProductPrice.DataPropertyName = "GiaBan";
-            this.clProductPrice.HeaderText = "giá bán";
-            this.clProductPrice.MinimumWidth = 6;
-            this.clProductPrice.Name = "clProductPrice";
             // 
             // clPrdID
             // 
@@ -443,14 +445,26 @@
             this.clTang.MinimumWidth = 6;
             this.clTang.Name = "clTang";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(122, 46);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(175, 24);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "thông tin hóa đơn";
+            // 
             // FrmSellProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1147, 700);
+            this.ClientSize = new System.Drawing.Size(1026, 732);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmSellProduct";
             this.Text = "FrmSellProduct";
             this.Load += new System.EventHandler(this.FrmSellProduct_Load);

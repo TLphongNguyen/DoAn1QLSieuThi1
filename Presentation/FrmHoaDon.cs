@@ -17,7 +17,6 @@ namespace Presentation
     public partial class FrmHoaDon : Form
     {
         IHoaDonBUL bll = new HoaDonBUL();
-        
         IChiTietHoaDonBUL chitiet = new ChiTietHoaDonBUL();
 
         FrmSellProduct FrmSellProduct;
@@ -45,6 +44,7 @@ namespace Presentation
             DateTime today = DateTime.Today;
             float tongtien =Function.tongTien;
             int manv = Function.BgetClass_ID;
+
             bll.Insert(new ETTHoaDon(today, manv));
             List<ETTHoaDon> danhSachSapXep = bll.getAll().OrderByDescending(hd => hd.Ma_hoa_don).ToList();
             // Lấy mã hóa đơn mới nhất
@@ -58,7 +58,7 @@ namespace Presentation
             {
                 try
                 {
-                    chitiet.KetXuatWord(txtName.Text, maHoaDonMoiNhat, tongtien, @"Template\Chitiethoadon_Template.docx", saveFileDialog.FileName);
+                    chitiet.KetXuatWord(manv.ToString(), maHoaDonMoiNhat, tongtien, @"Template\Chitiethoadon_Template.docx", saveFileDialog.FileName);
                     MessageBox.Show("Kết xuất thành công!");
                 }
                 catch (Exception ex)
@@ -72,6 +72,24 @@ namespace Presentation
             FrmSellProduct.ResetDgv();
             this.Close();
         }
-        
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            FrmProduct prd = new FrmProduct();
+            prd.Show();
+            this.Hide();
+        }
+
+        private void btnDestroy_Click(object sender, EventArgs e)
+        {
+            FrmProduct prd = new FrmProduct();
+            prd.Show();
+            this.Hide();
+        }
+
+        private void FrmHoaDon_Load(object sender, EventArgs e)
+        {
+            LoadDaTa();
+        }
     }
 }
