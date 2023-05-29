@@ -71,12 +71,52 @@ namespace BusinessLogicLayer
                         {
                             for (int i = 0; i < data.Count; i++)
                             {
-                                string TSP = product.getAll().FirstOrDefault(SP => SP.MSP == data[i].Ma_hoa_don)?.MSP.ToString();
+                                string tensp = product.getAll().FirstOrDefault(sp => sp.MSP == data[i].Ma_san_pham)?.TSP;
                                 Novacode.Row newRow = myTable.InsertRow(myTable.Rows[cRow], cRow + i + 1);
                                 newRow.Cells[0].Paragraphs.First().Append((i + 1).ToString()).ReplaceText(fTempTableData, "");
-                                newRow.Cells[1].Paragraphs.First().Append(TSP);
-                                newRow.Cells[2].Paragraphs.First().Append(data[i].So_luong.ToString() + "   X");
+                                newRow.Cells[1].Paragraphs.First().Append(data[i].Ma_san_pham.ToString());
+                                newRow.Cells[2].Paragraphs.First().Append(data[i].So_luong.ToString());
                                 newRow.Cells[3].Paragraphs.First().Append(data[i].Gia_ban.ToString());
+                            }
+                            cRow += 1;
+                        }
+                        myTable.RemoveRow(1);
+                    }
+                    document.ReplaceText(fTempTableData, "");
+                    document.Save();
+                    document.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                res = ex.Message;
+            }
+            return res;
+        }
+        public static string CreatePhieuNhapTemplate(string filename, Dictionary<string, string> dictionaryData, IList<ETTCTPN> data)
+        {
+            string res = "";
+            IProductBUL product = new ProductBUL();
+            try
+            {
+                using (DocX document = DocX.Load(filename))
+                {
+                    ReplaceTime(document, null);
+                    ReplaceData(dictionaryData, null, document);
+                    int cRow = 1;
+                    if (data != null && data.Count > 0)
+                    {
+                        Novacode.Table myTable = FindTableWithText(document.Tables, fTempTableData, out int Row, out int cCell);
+                        if (data.Count > 0)
+                        {
+                            for (int i = 0; i < data.Count; i++)
+                            {
+                                string tenSP  = product.getAll().FirstOrDefault(sanpham => sanpham.MSP == data[i].MaSanPham)?.TSP;
+                                Novacode.Row newRow = myTable.InsertRow(myTable.Rows[cRow], cRow + i + 1);
+                                newRow.Cells[0].Paragraphs.First().Append((i + 1).ToString()).ReplaceText(fTempTableData, "");
+                                newRow.Cells[1].Paragraphs.First().Append(tenSP);
+                                newRow.Cells[2].Paragraphs.First().Append(data[i].SoLuong.ToString() + "   X");
+                                newRow.Cells[3].Paragraphs.First().Append(data[i].DonGia.ToString());
                             }
                             cRow += 1;
                         }

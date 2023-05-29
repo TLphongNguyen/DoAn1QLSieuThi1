@@ -67,17 +67,19 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(475, 696);
+            this.panel1.Size = new System.Drawing.Size(418, 732);
             this.panel1.TabIndex = 0;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(50, 481);
+            this.label5.Location = new System.Drawing.Point(38, 391);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 20);
+            this.label5.Size = new System.Drawing.Size(76, 17);
             this.label5.TabIndex = 10;
             this.label5.Text = "Tìm kiếm : ";
             // 
@@ -93,14 +95,14 @@
             this.txtSearchID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearchID.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSearchID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchID.Location = new System.Drawing.Point(149, 466);
-            this.txtSearchID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearchID.Location = new System.Drawing.Point(112, 379);
+            this.txtSearchID.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtSearchID.Name = "txtSearchID";
             this.txtSearchID.PasswordChar = '\0';
             this.txtSearchID.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSearchID.PlaceholderText = "Nhập loại hàng cần tìm";
             this.txtSearchID.SelectedText = "";
-            this.txtSearchID.Size = new System.Drawing.Size(276, 48);
+            this.txtSearchID.Size = new System.Drawing.Size(207, 39);
             this.txtSearchID.TabIndex = 9;
             // 
             // btnSearch
@@ -115,9 +117,10 @@
             this.btnSearch.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSearch.ForeColor = System.Drawing.Color.Black;
-            this.btnSearch.Location = new System.Drawing.Point(149, 577);
+            this.btnSearch.Location = new System.Drawing.Point(112, 469);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(180, 45);
+            this.btnSearch.Size = new System.Drawing.Size(135, 37);
             this.btnSearch.TabIndex = 8;
             this.btnSearch.Text = "Tìm Kiếm";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -134,9 +137,10 @@
             this.btnDeleteCategory.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnDeleteCategory.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDeleteCategory.ForeColor = System.Drawing.Color.Black;
-            this.btnDeleteCategory.Location = new System.Drawing.Point(149, 374);
+            this.btnDeleteCategory.Location = new System.Drawing.Point(112, 304);
+            this.btnDeleteCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDeleteCategory.Name = "btnDeleteCategory";
-            this.btnDeleteCategory.Size = new System.Drawing.Size(180, 45);
+            this.btnDeleteCategory.Size = new System.Drawing.Size(135, 37);
             this.btnDeleteCategory.TabIndex = 7;
             this.btnDeleteCategory.Text = "Xóa loại hàng";
             this.btnDeleteCategory.Click += new System.EventHandler(this.btnDeleteCategory_Click);
@@ -153,9 +157,10 @@
             this.btbAddCategory.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btbAddCategory.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btbAddCategory.ForeColor = System.Drawing.Color.Black;
-            this.btbAddCategory.Location = new System.Drawing.Point(54, 301);
+            this.btbAddCategory.Location = new System.Drawing.Point(40, 245);
+            this.btbAddCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btbAddCategory.Name = "btbAddCategory";
-            this.btbAddCategory.Size = new System.Drawing.Size(180, 45);
+            this.btbAddCategory.Size = new System.Drawing.Size(135, 37);
             this.btbAddCategory.TabIndex = 6;
             this.btbAddCategory.Text = "Thêm loại hàng";
             this.btbAddCategory.Click += new System.EventHandler(this.btbAddCategory_Click);
@@ -164,9 +169,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(100, 30);
+            this.label4.Location = new System.Drawing.Point(75, 24);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(246, 32);
+            this.label4.Size = new System.Drawing.Size(192, 26);
             this.label4.TabIndex = 5;
             this.label4.Text = "Quản lí loại hàng";
             // 
@@ -182,9 +188,10 @@
             this.btnUpdateCategory.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnUpdateCategory.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnUpdateCategory.ForeColor = System.Drawing.Color.Black;
-            this.btnUpdateCategory.Location = new System.Drawing.Point(256, 301);
+            this.btnUpdateCategory.Location = new System.Drawing.Point(192, 245);
+            this.btnUpdateCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdateCategory.Name = "btnUpdateCategory";
-            this.btnUpdateCategory.Size = new System.Drawing.Size(180, 45);
+            this.btnUpdateCategory.Size = new System.Drawing.Size(135, 37);
             this.btnUpdateCategory.TabIndex = 4;
             this.btnUpdateCategory.Text = "Sửa loại hàng";
             this.btnUpdateCategory.Click += new System.EventHandler(this.btnUpdateCategory_Click);
@@ -201,22 +208,23 @@
             this.txtNameCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNameCategory.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNameCategory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNameCategory.Location = new System.Drawing.Point(196, 212);
-            this.txtNameCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNameCategory.Location = new System.Drawing.Point(147, 172);
+            this.txtNameCategory.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtNameCategory.Name = "txtNameCategory";
             this.txtNameCategory.PasswordChar = '\0';
             this.txtNameCategory.PlaceholderText = "";
             this.txtNameCategory.SelectedText = "";
-            this.txtNameCategory.Size = new System.Drawing.Size(229, 48);
+            this.txtNameCategory.Size = new System.Drawing.Size(172, 39);
             this.txtNameCategory.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(50, 222);
+            this.label2.Location = new System.Drawing.Point(38, 180);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 20);
+            this.label2.Size = new System.Drawing.Size(90, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "tên loại hàng";
             // 
@@ -232,22 +240,23 @@
             this.txtIDCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIDCategory.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtIDCategory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIDCategory.Location = new System.Drawing.Point(196, 133);
-            this.txtIDCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtIDCategory.Location = new System.Drawing.Point(147, 108);
+            this.txtIDCategory.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtIDCategory.Name = "txtIDCategory";
             this.txtIDCategory.PasswordChar = '\0';
             this.txtIDCategory.PlaceholderText = "";
             this.txtIDCategory.SelectedText = "";
-            this.txtIDCategory.Size = new System.Drawing.Size(229, 48);
+            this.txtIDCategory.Size = new System.Drawing.Size(172, 39);
             this.txtIDCategory.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(50, 145);
+            this.label1.Location = new System.Drawing.Point(38, 118);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 20);
+            this.label1.Size = new System.Drawing.Size(89, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "mã loại hàng";
             // 
@@ -277,13 +286,14 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCategory.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCategory.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvCategory.Location = new System.Drawing.Point(532, 188);
+            this.dgvCategory.Location = new System.Drawing.Point(481, 180);
+            this.dgvCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvCategory.Name = "dgvCategory";
             this.dgvCategory.ReadOnly = true;
             this.dgvCategory.RowHeadersVisible = false;
             this.dgvCategory.RowHeadersWidth = 51;
             this.dgvCategory.RowTemplate.Height = 24;
-            this.dgvCategory.Size = new System.Drawing.Size(563, 478);
+            this.dgvCategory.Size = new System.Drawing.Size(561, 498);
             this.dgvCategory.TabIndex = 1;
             this.dgvCategory.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvCategory.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -328,22 +338,24 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(666, 80);
+            this.label3.Location = new System.Drawing.Point(500, 65);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(276, 32);
+            this.label3.Size = new System.Drawing.Size(214, 26);
             this.label3.TabIndex = 4;
             this.label3.Text = "Thông tin loại hàng";
             // 
             // FrmCategory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
-            this.ClientSize = new System.Drawing.Size(1147, 696);
+            this.ClientSize = new System.Drawing.Size(1086, 732);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvCategory);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmCategory";
             this.Text = "FrmCategory";
             this.Load += new System.EventHandler(this.FrmCategory_Load);

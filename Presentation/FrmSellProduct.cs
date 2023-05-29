@@ -31,14 +31,15 @@ namespace Presentation
             foreach (DataGridViewRow row in dgvSell.Rows)
             {
                 //kh.SearchLinq(value)[0].Hoten;
-                string nameProduct = row.Cells[1].Value.ToString();
+                //string nameProduct = row.Cells[1].Value.ToString();
                 int soluong = int.Parse(row.Cells[3].Value.ToString());
-                int MaSanPham = product.getAll().Where(t => t.TSP == nameProduct)
-                         .Select(t => t.MSP)
-                         .FirstOrDefault();
-                decimal GiaBan = decimal.Parse(row.Cells[3].Value.ToString());
+                int MaSanPham = int.Parse(row.Cells[0].Value.ToString());
+                //int MaSanPham = product.getAll().Where(t => t.TSP == nameProduct)
+                //         .Select(t => t.MSP)
+                //         .FirstOrDefault();
+                decimal GiaBan = decimal.Parse(row.Cells[4].Value.ToString());
                 int mahoadon = (int)hoadon.getAll().OrderByDescending(hd => hd.Ma_hoa_don).FirstOrDefault()?.Ma_hoa_don;
-                chitiethd.Insert(new ETTChiTietHoaDon(mahoadon, 3, soluong, GiaBan));
+                chitiethd.Insert(new ETTChiTietHoaDon(mahoadon, MaSanPham, soluong, GiaBan));
                 MessageBox.Show(MaSanPham.ToString());
 
             }
@@ -97,7 +98,11 @@ namespace Presentation
             dgvProducts.DataSource = product.getAll();
             btnPay.Enabled = false;
             btnDestroy.Enabled = false;
+            lbPrice.Text = "0 VND";
             LoadData();
+            ResetDgv();
+
+
         }
 
         private void dgvProducts_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -134,13 +139,7 @@ namespace Presentation
                     MessageBox.Show("Sản phẩm đã có trong hóa đơn!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     check = false;
                 }
-                //else
-                //{
-                //    MessageBox.Show(""+ x.Cells[0].Value);
-                //    MessageBox.Show("" + selectedRow.Cells[0].Value);
-
-
-                //}
+                
 
             }
             if (dgvSell.Rows.Count == 0 || check)
@@ -208,14 +207,33 @@ namespace Presentation
 
         private void dgvSell_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            decimal x = 0;
+
+
+            int SL = 0;
+            foreach (DataGridViewRow x in dgvProducts.Rows)
+            {
+                if (dgvSell.Rows[e.RowIndex].Cells["clPrdID"].Value.ToString() == x.Cells[0].Value.ToString())
+                {
+                    SL = int.Parse(x.Cells[3].Value.ToString());
+                }
+            }
             if (e.ColumnIndex == dgvSell.Columns["clTang"].Index)
             {
                 // Nút tăng số lượng được nhấp vào
                 int currentQuantity = Convert.ToInt32(dgvSell.Rows[e.RowIndex].Cells["clSoLuong"].Value);
                 int newQuantity = currentQuantity + 1;
-                dgvSell.Rows[e.RowIndex].Cells["clSoLuong"].Value = newQuantity;
-                dgvSell.Rows[e.RowIndex].Cells["clSum"].Value = Convert.ToDecimal(dgvSell.Rows[e.RowIndex].Cells["clPrice"].Value) * newQuantity;
+                //dgvSell.Rows[e.RowIndex].Cells["clSoLuong"].Value = newQuantity;
+                //dgvSell.Rows[e.RowIndex].Cells["clSum"].Value = Convert.ToDecimal(dgvSell.Rows[e.RowIndex].Cells["clPrice"].Value) * newQuantity;
+                if (newQuantity <= SL)
+                {
+                    dgvSell.Rows[e.RowIndex].Cells["clSoLuong"].Value = newQuantity;
+                    dgvSell.Rows[e.RowIndex].Cells["clSum"].Value = Convert.ToDecimal(dgvSell.Rows[e.RowIndex].Cells["clPrice"].Value) * newQuantity;
+                }
+                else
+                {
+                    MessageBox.Show("Đã hết sản phẩm!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
 
             }
             else if (e.ColumnIndex == dgvSell.Columns["clGiam"].Index)
@@ -234,6 +252,8 @@ namespace Presentation
                     dgvSell.Rows.RemoveAt(e.RowIndex);
                 }
             }
+            CaculatorPrice();
+
         }
 
         private void btnDestroy_Click(object sender, EventArgs e)
@@ -281,15 +301,19 @@ namespace Presentation
 
         private void guna2GradientButton3_Click(object sender, EventArgs e)
         {
-            string value = txtSellSearch.Text;
-            dgvProducts.DataSource = product.SearchLinq(value);
+            ETTProduct ETTC = new ETTProduct();
+            ETTC.TSP = txtSellSearch.Text;
+            dgvProducts.DataSource = product.SearchLinq(ETTC);
 
         }
 
         private void btnReload_Click(object sender, EventArgs e)
         {
-            dgvProducts.AutoGenerateColumns = false;
-            dgvProducts.DataSource = product.getAll();
+            //dgvProducts.AutoGenerateColumns = false;
+            //dgvProducts.DataSource = product.getAll();
+            FrmSellProduct_Load(sender, e);
+
+
         }
 
         private void dgvSell_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)

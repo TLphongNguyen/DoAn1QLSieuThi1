@@ -57,15 +57,15 @@ namespace DataAccessLayer
             while (dra.Read())
             {
                 int MaLoai = 0;
-                if (!DBNull.Value.Equals(dra["MALOAI"]))
+                if (!DBNull.Value.Equals(dra["MaLoai"]))
                 {
-                    MaLoai = Convert.ToInt32(dra["MALOAI"]);
+                    MaLoai = Convert.ToInt32(dra["MaLoai"]);
                 }
 
                 string TenLoai = string.Empty;
-                if (!DBNull.Value.Equals(dra["TENLOAI"]))
+                if (!DBNull.Value.Equals(dra["TenLoai"]))
                 {
-                    TenLoai = dra["TENLOAI"].ToString();
+                    TenLoai = dra["TenLoai"].ToString();
                 }
                 table.Rows.Add(MaLoai, TenLoai);
             }

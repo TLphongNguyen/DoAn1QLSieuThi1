@@ -72,11 +72,11 @@
     <Compile Include="FrmImportProduct.Designer.cs">
       <DependentUpon>FrmImportProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMainNV.cs">
+    <Compile Include="FrmKhoHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMainNV.Designer.cs">
-      <DependentUpon>FrmMainNV.cs</DependentUpon>
+    <Compile Include="FrmKhoHang.Designer.cs">
+      <DependentUpon>FrmKhoHang.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmNhaCC.cs">
       <SubType>Form</SubType>
@@ -138,8 +138,8 @@
     <EmbeddedResource Include="FrmImportProduct.resx">
       <DependentUpon>FrmImportProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMainNV.resx">
-      <DependentUpon>FrmMainNV.cs</DependentUpon>
+    <EmbeddedResource Include="FrmKhoHang.resx">
+      <DependentUpon>FrmKhoHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNhaCC.resx">
       <DependentUpon>FrmNhaCC.cs</DependentUpon>
@@ -251,6 +251,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\2303114_explore_lense_magnifier_search_searching_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open_eye_view_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_eye_slash_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

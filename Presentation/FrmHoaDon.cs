@@ -44,6 +44,7 @@ namespace Presentation
             DateTime today = DateTime.Today;
             float tongtien =Function.tongTien;
             int manv = Function.BgetClass_ID;
+            string namenv = Function.username;
 
             bll.Insert(new ETTHoaDon(today, manv));
             List<ETTHoaDon> danhSachSapXep = bll.getAll().OrderByDescending(hd => hd.Ma_hoa_don).ToList();
@@ -58,7 +59,7 @@ namespace Presentation
             {
                 try
                 {
-                    chitiet.KetXuatWord(manv.ToString(), maHoaDonMoiNhat, tongtien, @"Template\Chitiethoadon_Template.docx", saveFileDialog.FileName);
+                    chitiet.KetXuatWord(txtName.Text, maHoaDonMoiNhat, tongtien,namenv, @"Template\Chitiethoadon_Template.docx", saveFileDialog.FileName);
                     MessageBox.Show("Kết xuất thành công!");
                 }
                 catch (Exception ex)
@@ -75,21 +76,38 @@ namespace Presentation
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            FrmProduct prd = new FrmProduct();
-            prd.Show();
+            Main m = new Main();
+            m.Show();
             this.Hide();
         }
 
         private void btnDestroy_Click(object sender, EventArgs e)
         {
-            FrmProduct prd = new FrmProduct();
-            prd.Show();
+            Main m = new Main();
+            m.Show();
             this.Hide();
         }
 
         private void FrmHoaDon_Load(object sender, EventArgs e)
         {
             LoadDaTa();
+            lblTongHoaDon.Text = Function.tongTien.ToString("#,##0 VND");
+            btnPay.Enabled = false;
+        }
+
+        private void txtTienkhachtra_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTienkhachtra.Text != "" && Function.tongTien <= float.Parse(txtTienkhachtra.Text))
+            {
+                btnPay.Enabled = true;
+                float priceBack = float.Parse(txtTienkhachtra.Text) - Function.tongTien;
+                lbTienThua.Text = priceBack.ToString("#,##0 VND");
+            }
+            else
+            {
+                btnPay.Enabled = false;
+                lbTienThua.Text = "";
+            }
         }
     }
 }

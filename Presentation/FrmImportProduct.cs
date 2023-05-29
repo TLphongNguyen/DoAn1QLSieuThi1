@@ -44,6 +44,8 @@ namespace Presentation
             txtdongia.Text = "";
             txttensp.Text = "";
             txtsoluong.Text = "";
+            txtmancc.Text = "";
+            txttencc.Text = "";
         }
 
         private void FrmImportProduct_Load(object sender, EventArgs e)
@@ -185,6 +187,19 @@ namespace Presentation
             txttencc.Text = "";
             dgvphieunhap.Rows.Clear();
             lblTongtien.Text = "0 VND";
+        }
+
+        private void btnTimkiemsp_Click(object sender, EventArgs e)
+        {
+            ETTProduct ETTC = new ETTProduct();
+            ETTC.TSP = txtTiemkiemsp.Text;
+            dgvSanpham.DataSource = bllpdt.SearchLinq(ETTC);
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            ResetForm();
+            FrmImportProduct_Load(sender, e);
         }
     }
 }

@@ -173,6 +173,16 @@ namespace Presentation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap close_eye_slash_icon {
+            get {
+                object obj = ResourceManager.GetObject("close_eye_slash_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap khohang {
             get {
                 object obj = ResourceManager.GetObject("khohang", resourceCulture);
@@ -206,6 +216,16 @@ namespace Presentation.Properties {
         internal static System.Drawing.Bitmap nhanvien {
             get {
                 object obj = ResourceManager.GetObject("nhanvien", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap open_eye_view_icon {
+            get {
+                object obj = ResourceManager.GetObject("open_eye_view_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

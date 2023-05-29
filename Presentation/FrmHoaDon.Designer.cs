@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHoaDon));
             this.lblTongHoaDon = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.lbRest = new System.Windows.Forms.Label();
             this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTienkhachtra = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
@@ -65,16 +64,6 @@
             this.label6.Size = new System.Drawing.Size(134, 20);
             this.label6.TabIndex = 85;
             this.label6.Text = "Tổng hóa đơn : ";
-            // 
-            // lbRest
-            // 
-            this.lbRest.AutoSize = true;
-            this.lbRest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRest.Location = new System.Drawing.Point(202, 352);
-            this.lbRest.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbRest.Name = "lbRest";
-            this.lbRest.Size = new System.Drawing.Size(0, 20);
-            this.lbRest.TabIndex = 84;
             // 
             // txtPhone
             // 
@@ -115,6 +104,7 @@
             this.txtTienkhachtra.SelectedText = "";
             this.txtTienkhachtra.Size = new System.Drawing.Size(275, 41);
             this.txtTienkhachtra.TabIndex = 82;
+            this.txtTienkhachtra.TextChanged += new System.EventHandler(this.txtTienkhachtra_TextChanged);
             // 
             // txtName
             // 
@@ -228,7 +218,7 @@
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageSize = new System.Drawing.Size(30, 30);
             this.btnExit.Location = new System.Drawing.Point(637, 10);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(64, 53);
             this.btnExit.TabIndex = 78;
@@ -237,12 +227,12 @@
             // lbTienThua
             // 
             this.lbTienThua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTienThua.Location = new System.Drawing.Point(203, 352);
+            this.lbTienThua.Location = new System.Drawing.Point(203, 348);
             this.lbTienThua.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTienThua.Name = "lbTienThua";
             this.lbTienThua.Size = new System.Drawing.Size(73, 24);
             this.lbTienThua.TabIndex = 88;
-            this.lbTienThua.Text = "100000";
+            this.lbTienThua.Text = "1";
             // 
             // FrmHoaDon
             // 
@@ -253,7 +243,6 @@
             this.Controls.Add(this.lbTienThua);
             this.Controls.Add(this.lblTongHoaDon);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.lbRest);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.txtTienkhachtra);
             this.Controls.Add(this.txtName);
@@ -265,7 +254,7 @@
             this.Controls.Add(this.btnDestroy);
             this.Controls.Add(this.btnPay);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmHoaDon";
             this.Text = "FrmHoaDon";
             this.Load += new System.EventHandler(this.FrmHoaDon_Load);
@@ -277,7 +266,6 @@
         #endregion
         private System.Windows.Forms.Label lblTongHoaDon;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lbRest;
         private Guna.UI2.WinForms.Guna2TextBox txtPhone;
         private Guna.UI2.WinForms.Guna2TextBox txtTienkhachtra;
         private Guna.UI2.WinForms.Guna2TextBox txtName;

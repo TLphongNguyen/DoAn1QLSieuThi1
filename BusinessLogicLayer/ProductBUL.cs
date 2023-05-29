@@ -163,17 +163,21 @@ namespace BusinessLogicLayer
         /// Tìm kiếm thông tin lớp học dùng Linq
         /// </summary>
         /// <param name="cls">Thông tin lớp</param> 
-        public IList<dynamic> SearchLinq(string value)
+        //public IList<dynamic> SearchLinq(string value)
+        //{
+        //    return getAllJoin().Where(ETTPR => (string.IsNullOrEmpty(value) || ETTPR.MSP.ToString().Contains(value) ||
+        //        (ETTPR.TSP == value) ||
+        //        (string.IsNullOrEmpty(value) || ETTPR.TSP.ToString().Contains(value)))).ToList();
+        //}
+        public IList<ETTProduct> SearchLinq(ETTProduct ETT)
         {
-            return getAllJoin().Where(ETTPR => (string.IsNullOrEmpty(value) || ETTPR.MSP.ToString().Contains(value) ||
-                (ETTPR.TSP == value) ||
-                (string.IsNullOrEmpty(value) || ETTPR.TSP.ToString().Contains(value)))).ToList();
+            return getAll().Where(x => (string.IsNullOrEmpty(ETT.TSP) || x.TSP.Contains(ETT.TSP))).ToList();
         }
         public List<dynamic> getAllJoin()
         {
             var product_Category = (from pd in this.getAll()
                                     join Ct in dalC.getAll() on pd.MLH equals Ct.Ma_loai_hang
-                                    select new { MaSanPham = pd.MSP, TenSanPham = pd.TSP, /*MaLH = pd.MLH,*/ Giaban = pd.GT, SoLuong = pd.SL, TenLoaiHang = Ct.Ten_loai_hang,/*maloaihang = Ct.Ma_loai_hang*/ });
+                                    select new { MaSanPham = pd.MSP, TenSanPham = pd.TSP, TenLoaiHang = Ct.Ten_loai_hang,/*MaLH = pd.MLH,*/ Giaban = pd.GT, SoLuong = pd.SL, /*maloaihang = Ct.Ma_loai_hang*/ });
             return product_Category.Cast<dynamic>().ToList();
         }
 

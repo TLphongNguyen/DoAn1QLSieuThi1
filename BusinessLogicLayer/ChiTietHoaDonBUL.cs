@@ -13,7 +13,7 @@ namespace BusinessLogicLayer
 {
     public class ChiTietHoaDonBUL : IChiTietHoaDonBUL
     {
-        IChiTietHoaDonDAL dal = new ChiTietHoaDonDAL();
+        ChiTietHoaDonDAL dal = new ChiTietHoaDonDAL();
         public IList<ETTChiTietHoaDon> getAll()
         {
             System.Data.DataTable table = dal.getAll();
@@ -30,8 +30,7 @@ namespace BusinessLogicLayer
             }
             return list;
         }
-
-
+        
 
         public int Insert(ETTChiTietHoaDon sp)
         {
@@ -47,7 +46,7 @@ namespace BusinessLogicLayer
         {
             return dal.Delete(masp);
         }
-        public void KetXuatWord(string name, int ma_hoa_don, float tongtien, string templatePath, string exportPath)
+        public void KetXuatWord(string name, int ma_hoa_don, float tongtien,string tennv, string templatePath, string exportPath)
         {
             IChiTietHoaDonBUL chitiet = new ChiTietHoaDonBUL();
             IList<ETTChiTietHoaDon> list = chitiet.getAll();
@@ -55,6 +54,7 @@ namespace BusinessLogicLayer
             Dictionary<string, string> dictionaryData = new Dictionary<string, string>();
             dictionaryData.Add("tennhanvien", name);
             dictionaryData.Add("tongtien", tongtien.ToString());
+            dictionaryData.Add("nhanvien", tennv);
             System.IO.File.Copy(templatePath, exportPath, true);
             ExportDocx.CreateChiTietTemplate(exportPath, dictionaryData, newList);
         }

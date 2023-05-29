@@ -43,10 +43,12 @@
   <ItemGroup>
     <Compile Include="ETTCategory.cs" />
     <Compile Include="ETTChiTietHoaDon.cs" />
+    <Compile Include="ETTCTPN.cs" />
     <Compile Include="ETTHoaDon.cs" />
     <Compile Include="ETTLoaiNhanVien.cs" />
     <Compile Include="ETTNhaCC.cs" />
     <Compile Include="ETTNhanVien.cs" />
+    <Compile Include="ETTPhieuNhap.cs" />
     <Compile Include="ETTProduct.cs" />
     <Compile Include="ETTThietLap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -45,14 +45,17 @@
   <ItemGroup>
     <Compile Include="CategoryDAL.cs" />
     <Compile Include="ChiTietHoaDonDAL.cs" />
+    <Compile Include="CTPNDAL.cs" />
     <Compile Include="Helper\DataBaseAccses.cs" />
     <Compile Include="HoaDonDAL.cs" />
     <Compile Include="Interface\ICategoryDAL.cs" />
     <Compile Include="Interface\IChiTietHoaDonDAL.cs" />
+    <Compile Include="Interface\ICTPNDAL.cs" />
     <Compile Include="Interface\IHoaDonDAL.cs" />
     <Compile Include="Interface\ILoaiNhanVienDAL.cs" />
     <Compile Include="Interface\INhaCCDAL.cs" />
     <Compile Include="Interface\INhanVienDAL.cs" />
+    <Compile Include="Interface\IPhieuNhapDAL.cs" />
     <Compile Include="Interface\IProductDAL.cs" />
     <Compile Include="Interface\IThietLapDAL.cs" />
     <Compile Include="Interface\IUserDAL.cs" />
@@ -60,6 +63,7 @@
     <Compile Include="LoaiNhanVienDAL.cs" />
     <Compile Include="NhaCCDAL.cs" />
     <Compile Include="NhanVienDAL.cs" />
+    <Compile Include="PhieuNhapDAL.cs" />
     <Compile Include="ProductDAL.cs" />
     <Compile Include="Helper\SqlHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

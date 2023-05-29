@@ -18,7 +18,8 @@ namespace BusinessLogicLayer.Interface
         int getProductID_Last();
         int checkProduct_ID(int ma_nhan_vien);
         IList<ETTProduct> Search(ETTProduct ETTPR);
-        IList<dynamic> SearchLinq(string value);
+        //IList<dynamic> SearchLinq(string value);
+        IList<ETTProduct> SearchLinq(ETTProduct ETT);
         List<dynamic> getAllJoin();
         
     }

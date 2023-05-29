@@ -104,6 +104,22 @@ namespace BusinessLogicLayer
             }
             else return null;
         }
+        public ETTNhanVien getMaLoai(int MaLoai)
+        {
+            System.Data.DataTable table = dal.getClass_ID(MaLoai);
+            if (checkClass_ID(MaLoai) != 0)
+            {
+                ETTNhanVien ETTNV = new ETTNhanVien();
+                ETTNV.Ma_nhan_vien = table.Rows[0].Field<int>(0);
+                ETTNV.Ho_ten = table.Rows[0].Field<string>(1);
+                ETTNV.Gioi_tinh = table.Rows[0].Field<string>(2);
+                ETTNV.Dia_chi = table.Rows[0].Field<string>(3);
+                ETTNV.So_dien_thoai = table.Rows[0].Field<string>(4);
+                ETTNV.Maloai = table.Rows[0].Field<int>(5);
+                return ETTNV;
+            }
+            else return null;
+        }
         /// <summary>
         /// Hàm lấy về mã của bản ghi mới nhất trong bảng tbl_Classes
         /// </summary> 
@@ -180,18 +196,22 @@ namespace BusinessLogicLayer
         /// Tìm kiếm thông tin lớp học dùng Linq
         /// </summary>
         /// <param name="cls">Thông tin lớp</param> 
-        public IList<ETTNhanVien> SearchLinq(ETTNhanVien ETT, int ma_nhan_vien)
+        public IList<dynamic> SearchLinq(string tennv, int loainv)
         {
-            return getAll().Where(x => (string.IsNullOrEmpty(ETT.Ho_ten) || x.Ho_ten.Contains(ETT.Ho_ten))
-            && (string.IsNullOrEmpty(x.Gioi_tinh) || x.Gioi_tinh.Contains(ETT.Gioi_tinh))
-            && (string.IsNullOrEmpty(x.Dia_chi) || x.Dia_chi.Contains(ETT.Dia_chi))
-            && (string.IsNullOrEmpty(x.Maloai.ToString()) || x.Maloai.ToString().Contains(ETT.Maloai.ToString()))
-            && (string.IsNullOrEmpty(x.So_dien_thoai) || x.So_dien_thoai.Contains(ETT.So_dien_thoai))).ToList();
+            if (tennv != "")
+            {
+                tennv = Tools.ChuanHoaXau(tennv);
+            }
+            return tl_nv().Where(x => ((string.IsNullOrEmpty(tennv) || x.ho_ten.Contains(tennv)) && (x.MaLoai == loainv || loainv == -5))).ToList();
         }
 
-        public IList<dynamic> SearchmanvLinq(int manv)
+        public IList<dynamic> SearchmanvLinq(string tennv)
         {
-            return (tl_nv().Where(x => (x.MaNV == manv)).ToList());
+            if (tennv != "")
+            {
+                tennv = Tools.ChuanHoaXau(tennv);
+            }
+            return (tl_nv().Where(x => (string.IsNullOrEmpty(tennv)) || x.Ho_ten.Contains(tennv)).ToList());
         }
         public void KetXuatWord(int Ma_nhan_vien, string templatePath, string exportPath)
         {

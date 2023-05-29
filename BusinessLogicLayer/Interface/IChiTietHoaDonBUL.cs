@@ -13,7 +13,8 @@ namespace BusinessLogicLayer.Interface
         int Update(ETTChiTietHoaDon x);
         int Delete(int ma);
         IList<ETTChiTietHoaDon> getAll();
-        void KetXuatWord(string name, int ma_hoa_don, float tongtien, string templatePath, string exportPath);
+      
+        void KetXuatWord(string name, int ma_hoa_don, float tongtien, string tennv, string templatePath, string exportPath);
 
     }
 }

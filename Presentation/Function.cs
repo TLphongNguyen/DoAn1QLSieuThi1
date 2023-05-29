@@ -13,6 +13,7 @@ namespace Presentation
         public static float tongTien;
         public static float TienKhachTra;
         public static string username;
+        public static int MaLoainv;
 
 
 

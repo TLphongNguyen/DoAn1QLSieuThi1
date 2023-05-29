@@ -17,8 +17,9 @@ namespace BusinessLogicLayer.Interface
         int getclassID_Last();
         int checkClass_ID(int ma_nhan_vien);
         IList<ETTNhanVien> Search(ETTNhanVien ETTNV);
-        IList<ETTNhanVien> SearchLinq(ETTNhanVien ETTNV, int ma_nhan_vien);
-        IList<dynamic> SearchmanvLinq(int manv);
+        ETTNhanVien getMaLoai(int MaLoai);
+        IList<dynamic> SearchLinq(string tennv, int loainv);
+        IList<dynamic> SearchmanvLinq(string tenNV);
         IList<dynamic> tl_nv();
         void KetXuatWord(int ma_nhan_vien, string templatePath, string exportPath);
     }

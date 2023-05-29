@@ -129,6 +129,7 @@ namespace BusinessLogicLayer
                 return null;
             }
         }
+        
         /// <summary>
         /// Hàm lấy về mã của bản ghi mới nhất trong bảng tbl_Classes
         /// </summary> 

@@ -19,6 +19,8 @@ namespace Presentation
         //User taikhoan = new User();
         //TaiKhoanBLL tkDLL = new TaiKhoanBLL();
         IThietLapBUL bul = new ThietLapBUL();
+        INhanVienBUL nv = new NhanVienBUL();
+        //ILoaiNhanVienBUL lnv = new LoaiNhanVienBUL();
         public LOGIN()
         {
             InitializeComponent();
@@ -26,35 +28,7 @@ namespace Presentation
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            //taikhoan.userName = txtUsername.Text;
-            //taikhoan.passWords = txtPassWord.Text;
-            //string getuser = tkDLL.CheckLogin(taikhoan);
-            //switch (getuser)
-            //{
-            //    case "requeid_TaiKhoan":
-            //        MessageBox.Show("không được để trống tài khoản");
-            //        return;
-            //    case "requeid_PassWord":
-            //        MessageBox.Show("không được để trống mật khẩu");
-            //        return;
-            //    case "tài khoản hoặc mật khẩu không chính xác":
-            //        MessageBox.Show("tài khoản mật khẩu không chính xác");
-            //        return;
-
-            //}
-            //if (txtUsername.Text != "admin"||txtPassWord.Text != "123")
-            //{
-            //    FrmMainNV mNv = new FrmMainNV();
-            //    mNv.Show();
-            //    this.Hide();
-
-            //}
-            //else
-            //{
-            //    Main main = new Main();
-            //    main.Show();
-            //    this.Hide();
-            //}
+            
             if (txtUsername.Text.Trim() != "" && txtPassWord.Text.Trim() != "")
             {
                 // Kiểm tra mật khẩu
@@ -62,22 +36,18 @@ namespace Presentation
                 if (isAccountExist)
                 {
                     int manvLogin = bul.TaiKhoanLogin(txtUsername.Text, txtPassWord.Text).Ma_nhan_vien;
+                    int lnvLogin = nv.getMaLoai(manvLogin).Maloai;
+                    ETTNhanVien mlnvLogin = nv.getMaLoai(lnvLogin);
                     ETTNhanVien nvLogin = bul.GetNhanVien(manvLogin);
+                    //MessageBox.Show(lnvLogin.ToString());
+                    
                     Function.BgetClass_ID = manvLogin;
                     Function.username = nvLogin.Ho_ten;
-                    if (txtUsername.Text != "admin" || txtPassWord.Text != "123")
-                    {
-                        FrmMainNV mNv = new FrmMainNV();
-                        mNv.Show();
-                        this.Hide();
-
-                    }
-                    else
-                    {
+                    Function.MaLoainv = lnvLogin;
                         Main main = new Main();
                         main.Show();
                         this.Hide();
-                    }
+                    
                 }
                 else
                 {
@@ -93,6 +63,30 @@ namespace Presentation
         }
 
         private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void LOGIN_Load(object sender, EventArgs e)
+        {
+            txtPassWord.UseSystemPasswordChar = true;
+        }
+
+        private void txtPassWord_IconRightClick(object sender, EventArgs e)
+        {
+            if (txtPassWord.UseSystemPasswordChar)
+            {
+                txtPassWord.UseSystemPasswordChar = false;
+                txtPassWord.IconRight = (Image)Properties.Resources.close_eye_slash_icon;
+            }
+            else
+            {
+                txtPassWord.UseSystemPasswordChar = true;
+                txtPassWord.IconRight = (Image)Properties.Resources.open_eye_view_icon;
+            }
+        }
+
+        private void guna2GradientButton3_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

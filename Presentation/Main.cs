@@ -77,13 +77,19 @@ namespace Presentation
         private void Main_Load(object sender, EventArgs e)
         {
             OpenchildForm(new FrmThongKe());
-            LbTime.Text = DateTime.Now.ToString();
-            var item = BLL.getAll();
-            //Console.WriteLine(bnv);
             
-                //lbName.Text = (string)item.GetType().GetProperty("Ho_ten").GetValue(item, null);
-                
-                
+            LbTime.Text = DateTime.Now.ToString();
+            
+            guna2GradientButton1_Click(sender, e);
+            lbName.Text = Function.username;
+                if (Function.MaLoainv != 1)
+                {
+                    btnSetting.Hide();
+                    btnEmploiee.Hide();
+                }
+
+            
+
 
 
 
@@ -93,6 +99,16 @@ namespace Presentation
         private void btnNhapHang_Click(object sender, EventArgs e)
         {
             OpenchildForm(new FrmImportProduct());
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            OpenchildForm(new FrmProduct());
+        }
+
+        private void btnSell_Click(object sender, EventArgs e)
+        {
+            OpenchildForm(new FrmSellProduct());
         }
     }
 }

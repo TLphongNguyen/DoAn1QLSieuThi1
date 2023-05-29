@@ -45,7 +45,7 @@ namespace Presentation
 
         private void btnProductAdd_Click(object sender, EventArgs e)
         {
-            if (txtProductName.Text == "" || cbbCategoryID.Text == "" || txtProcductPrice.Text == ""|| txtProductQuanty.Text == "")
+            if (txtProductName.Text == "" || cbbCategoryID.Text == "" || txtProcductPrice.Text == "")
                 MessageBox.Show("Dữ liệu chưa đủ, xin hãy nhập lại!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
@@ -135,7 +135,9 @@ namespace Presentation
         private void btnProductSearch_Click(object sender, EventArgs e)
         {
 
-            dgvProduct.DataSource = Prd.SearchLinq(txtProductSearch.Text);
+            ETTProduct ETTC = new ETTProduct();
+            ETTC.TSP = txtProductSearch.Text;
+            dgvProduct.DataSource = Prd.SearchLinq(ETTC);
         }
 
         private void cbbCategoryID_SelectedIndexChanged(object sender, EventArgs e)

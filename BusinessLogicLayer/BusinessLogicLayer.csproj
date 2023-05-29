@@ -245,25 +245,31 @@
   <ItemGroup>
     <Compile Include="CategoryBUL.cs" />
     <Compile Include="ChiTietHoaDonBUL.cs" />
+    <Compile Include="CTPNBUL.cs" />
     <Compile Include="CustomExport\ExportDocx.cs" />
     <Compile Include="Helper\DocxHelper.cs" />
     <Compile Include="Helper\ExcelHelper.cs" />
     <Compile Include="HoaDonBUL.cs" />
     <Compile Include="Interface\ICategoryBUL.cs" />
     <Compile Include="Interface\IChiTietHoaDonBUL.cs" />
+    <Compile Include="Interface\ICTPNBUL.cs" />
     <Compile Include="Interface\IHoaDonBUL.cs" />
     <Compile Include="Interface\ILoaiNhanVienBUL.cs" />
     <Compile Include="Interface\INhaCCBUL.cs" />
     <Compile Include="Interface\INhanVienBUL.cs" />
+    <Compile Include="Interface\IPhieuNhapBUL.cs" />
     <Compile Include="Interface\IProductBUL.cs" />
     <Compile Include="Interface\IThietLapBUL.cs" />
+    <Compile Include="Interface\IThongKeBUL.cs" />
     <Compile Include="Interface\TaiKhoanBLL.cs" />
     <Compile Include="LoaiNhanVienBUL.cs" />
     <Compile Include="NhaCCBUL.cs" />
     <Compile Include="NhanVienBUL.cs" />
+    <Compile Include="PhieuNhapBUL.cs" />
     <Compile Include="ProductBUL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThietLapBUL.cs" />
+    <Compile Include="ThongKeBUL.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
