@@ -26,10 +26,6 @@ namespace BusinessLogicLayer
         }
 
 
-        /// <summary>
-        /// Hàm xóa thông tin lớp học khỏi CSDL với mã lớp được chỉ định từ tầng Presentation
-        /// Nếu không xóa được lớp do lớp này không tồn tại hàm trả về giá trị -1
-        /// </summary>
 
 
         public int Delete(int ma_san_pham)
@@ -38,11 +34,7 @@ namespace BusinessLogicLayer
                 return dal.Delete(ma_san_pham);
             else return -1;
         }
-        /// <summary>
-        /// Hàm cập nhật lại thông tin một lớp học vào CSDL với thông tin mới được lấy từ tầng Presentation
-        /// Nếu việc cập nhật thất bại do mã lớp không tồn tại thì hàm trả về -1
-        /// </summary>
-        /// <param name="cls">Thông tin lớp mới cần được cập nhật lại vào CSDL</param>
+        
 
         public int Update(ETTProduct ETTPR)
         {
@@ -54,9 +46,7 @@ namespace BusinessLogicLayer
         {
             return dal.UpdateSL(sp);
         }
-        /// <summary>
-        /// Hàm trả về danh sách các lớp cóp trong CSDL
-        /// </summary>
+       
 
         public IList<ETTProduct> getAll()
         {
@@ -74,10 +64,7 @@ namespace BusinessLogicLayer
             }
             return list;
         }
-        /// <summary>
-        /// Hàm trả về thông tin cụ thể một lớp đã được chỉ định
-        /// Nếu mã lớp không tồn tại hàm trả về giá trị null
-        /// </summary>
+        
 
 
         public ETTProduct getProduct_ID(int ma_san_pham)
@@ -95,83 +82,28 @@ namespace BusinessLogicLayer
             }
             else return null;
         }
-        /// <summary>
-        /// Hàm lấy về mã của bản ghi mới nhất trong bảng tbl_Classes
-        /// </summary> 
+        
         public int getProductID_Last()
         {
             if (dal.getAll().Rows.Count == 0)
                 return 1;
             else return dal.getProductID_Last();
         }
-        /// <summary>
-        /// Kiểm tra xem một lớp cho bởi mã lớp có trong CSDL không?
-        /// Nếu có hàm trả về giá trị khác 0 còn không có trả về giá trị bằng 0
-        /// </summary>
-        /// <param name="ma_nhan_vien">Mã lớp</param>
+        
 
         public int checkProduct_ID(int ma_san_pham)
         {
             return dal.checkProduct_ID(ma_san_pham);
         }
-        /// <summary>
-        /// Tìm kiếm thông tin lớp học 
-        /// </summary>
-        /// <param name="cls">Thông tin lớp</param> 
-        public IList<ETTProduct> Search(ETTProduct ETTPR)
-        {
-            IList<ETTProduct> list = getAll();
-            IList<ETTProduct> kq = new List<ETTProduct>();
-            //Voi gai tri ngam dinh ban dau
-            if (ETTPR.TSP == null && ETTPR.MLH == null && ETTPR.GT == null && ETTPR.SL == null)
-            {
-                kq = list;
-            }
-            //Tim theo ten sản phẩm
-            if (ETTPR.TSP != null && ETTPR.MLH == null && ETTPR.GT == null && ETTPR.SL == null)
-            {
-                foreach (ETTProduct ETT in list)
-                    if (ETT.TSP.IndexOf(ETTPR.TSP) >= 0)
-                    {
-                        kq.Add(new ETTProduct(ETT));
-                    }
-            }
-            //Tim theo giá tiền
-            else if (ETTPR.TSP == null && ETTPR.MLH == null && ETTPR.GT != null && ETTPR.SL == null)
-            {
-                foreach (ETTProduct ETT in list)
-                    if (ETT.GT.ToString().IndexOf(ETTPR.GT.ToString()) >= 0)
-                    {
-                        kq.Add(new ETTProduct(ETT));
-                    }
-            }
-            //Tim theo so luong
-            else if (ETTPR.TSP == null && ETTPR.MLH == null && ETTPR.GT == null && ETTPR.SL != null)
-            {
-                foreach (ETTProduct ETT in list)
-                    if (ETT.SL.ToString().IndexOf(ETTPR.SL.ToString()) >= 0)
-                    {
-                        kq.Add(new ETTProduct(ETT));
-                    }
-            }
-            
-            //Cac truong hop khac cac ban tu lam
-            else kq = null;
-            return kq;
-        }
-        /// <summary>
-        /// Tìm kiếm thông tin lớp học dùng Linq
-        /// </summary>
-        /// <param name="cls">Thông tin lớp</param> 
-        //public IList<dynamic> SearchLinq(string value)
-        //{
-        //    return getAllJoin().Where(ETTPR => (string.IsNullOrEmpty(value) || ETTPR.MSP.ToString().Contains(value) ||
-        //        (ETTPR.TSP == value) ||
-        //        (string.IsNullOrEmpty(value) || ETTPR.TSP.ToString().Contains(value)))).ToList();
-        //}
+        
+        
         public IList<ETTProduct> SearchLinq(ETTProduct ETT)
         {
             return getAll().Where(x => (string.IsNullOrEmpty(ETT.TSP) || x.TSP.Contains(ETT.TSP))).ToList();
+        }
+        public IList<dynamic> SearchLinq1(ETTProduct ETT)
+        {
+            return getAllJoin().Where(x => (string.IsNullOrEmpty(ETT.TSP) || x.TSP.Contains(ETT.TSP))).ToList();
         }
         public List<dynamic> getAllJoin()
         {

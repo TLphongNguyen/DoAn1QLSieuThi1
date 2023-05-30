@@ -17,8 +17,6 @@ namespace BusinessLogicLayer.Interface
         ETTProduct getProduct_ID(int ma_san_pham);
         int getProductID_Last();
         int checkProduct_ID(int ma_nhan_vien);
-        IList<ETTProduct> Search(ETTProduct ETTPR);
-        //IList<dynamic> SearchLinq(string value);
         IList<ETTProduct> SearchLinq(ETTProduct ETT);
         List<dynamic> getAllJoin();
         

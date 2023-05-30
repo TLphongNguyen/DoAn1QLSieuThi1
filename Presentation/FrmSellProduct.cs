@@ -30,13 +30,10 @@ namespace Presentation
         {
             foreach (DataGridViewRow row in dgvSell.Rows)
             {
-                //kh.SearchLinq(value)[0].Hoten;
-                //string nameProduct = row.Cells[1].Value.ToString();
+                
                 int soluong = int.Parse(row.Cells[3].Value.ToString());
                 int MaSanPham = int.Parse(row.Cells[0].Value.ToString());
-                //int MaSanPham = product.getAll().Where(t => t.TSP == nameProduct)
-                //         .Select(t => t.MSP)
-                //         .FirstOrDefault();
+                
                 decimal GiaBan = decimal.Parse(row.Cells[4].Value.ToString());
                 int mahoadon = (int)hoadon.getAll().OrderByDescending(hd => hd.Ma_hoa_don).FirstOrDefault()?.Ma_hoa_don;
                 chitiethd.Insert(new ETTChiTietHoaDon(mahoadon, MaSanPham, soluong, GiaBan));
@@ -110,7 +107,7 @@ namespace Presentation
 
             int selectedRowIndex = e.RowIndex;
             // Lấy dữ liệu của hàng được chọn
-            DataGridViewRow selectedRow = dgvProducts.Rows[selectedRowIndex];
+            DataGridViewRow selectedRow = dgvProducts.Rows[selectedRowIndex];//Tạo một đối tượng selectedRow từ DataGridViewRow tương ứng với chỉ mục hàng được chọn từ dgvProducts.
 
             // Tạo một hàng mới
             DataGridViewRow newRow = new DataGridViewRow();
@@ -119,6 +116,7 @@ namespace Presentation
             for (int i = 0; i < dgvProducts.ColumnCount; i++)
             {
                 newRow.Cells[i].ValueType = dgvSell.Columns[i].ValueType;
+                //Gán giá trị mặc định cho mỗi ô dữ liệu trong newRow để có số lượng ô dữ liệu bằng với số cột trong DataGridView đích (dgvSell).
             }
             newRow.Cells[0].Value = selectedRow.Cells[0].Value;
             newRow.Cells[1].Value = selectedRow.Cells[1].Value;
@@ -130,7 +128,7 @@ namespace Presentation
             quantityCell2.Value = "-";
             newRow.Cells[6] = quantityCell;
             newRow.Cells[5] = quantityCell2;
-            newRow.Cells[3].Value = 1;
+            newRow.Cells[3].Value = 1;//Gán giá trị mặc định là 1 cho ô thứ 3 của newRow
             Boolean check = true;
             foreach (DataGridViewRow x in dgvSell.Rows)
             {
@@ -210,11 +208,11 @@ namespace Presentation
 
 
             int SL = 0;
-            foreach (DataGridViewRow x in dgvProducts.Rows)
+            foreach (DataGridViewRow x in dgvProducts.Rows)//duyệt qua từng hàng trong dgvProduct
             {
                 if (dgvSell.Rows[e.RowIndex].Cells["clPrdID"].Value.ToString() == x.Cells[0].Value.ToString())
                 {
-                    SL = int.Parse(x.Cells[3].Value.ToString());
+                    SL = int.Parse(x.Cells[3].Value.ToString());//gán giá trị vào biến SL
                 }
             }
             if (e.ColumnIndex == dgvSell.Columns["clTang"].Index)
@@ -222,8 +220,7 @@ namespace Presentation
                 // Nút tăng số lượng được nhấp vào
                 int currentQuantity = Convert.ToInt32(dgvSell.Rows[e.RowIndex].Cells["clSoLuong"].Value);
                 int newQuantity = currentQuantity + 1;
-                //dgvSell.Rows[e.RowIndex].Cells["clSoLuong"].Value = newQuantity;
-                //dgvSell.Rows[e.RowIndex].Cells["clSum"].Value = Convert.ToDecimal(dgvSell.Rows[e.RowIndex].Cells["clPrice"].Value) * newQuantity;
+                
                 if (newQuantity <= SL)
                 {
                     dgvSell.Rows[e.RowIndex].Cells["clSoLuong"].Value = newQuantity;
@@ -301,9 +298,9 @@ namespace Presentation
 
         private void guna2GradientButton3_Click(object sender, EventArgs e)
         {
-            ETTProduct ETTC = new ETTProduct();
-            ETTC.TSP = txtSellSearch.Text;
-            dgvProducts.DataSource = product.SearchLinq(ETTC);
+            ETTProduct ETT = new ETTProduct();
+            ETT.TSP = txtSellSearch.Text;
+            dgvProducts.DataSource = product.SearchLinq1(ETT);
 
         }
 
@@ -321,10 +318,14 @@ namespace Presentation
             if (dgvSell.Rows.Count > 0)
             {
                 btnPay.Enabled = true;
+                btnDestroy.Enabled = true;
+
             }
             else
             {
                 btnPay.Enabled = false;
+                btnDestroy.Enabled = false;
+
             }
         }
     }
