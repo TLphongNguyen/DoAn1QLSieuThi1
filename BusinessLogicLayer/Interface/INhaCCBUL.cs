@@ -18,6 +18,5 @@ namespace BusinessLogicLayer.Interface
         int checkNHaCC_ID(int ma_nha_cung_cap);
         IList<ETTNhaCC> Search(ETTNhaCC ETTNC);
         IList<ETTNhaCC> SearchLinq(ETTNhaCC ETTNC);
-        void KetXuatWord(int ma_nha_cung_cap, string templatePath, string exportPath);
     }
 }

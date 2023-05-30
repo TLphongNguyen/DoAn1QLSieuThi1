@@ -16,7 +16,6 @@ namespace BusinessLogicLayer.Interface
         ETTCategory getLoaiHang_ID(int ma_loai_hang);
         int getLoaiHangID_Last();
         int checkLoaiHang_ID(int ma_loai_hang);
-        IList<ETTCategory> Search(ETTCategory ETTCT);
         IList<ETTCategory> SearchLinq(ETTCategory ETTCT);
     }
 }

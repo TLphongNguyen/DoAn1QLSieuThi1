@@ -300,7 +300,7 @@ namespace Presentation
         {
             ETTProduct ETT = new ETTProduct();
             ETT.TSP = txtSellSearch.Text;
-            dgvProducts.DataSource = product.SearchLinq1(ETT);
+            dgvProducts.DataSource = product.SearchLinq(ETT);
 
         }
 

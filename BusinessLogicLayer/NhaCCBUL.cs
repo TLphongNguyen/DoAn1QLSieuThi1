@@ -15,7 +15,6 @@ namespace BusinessLogicLayer
     public class NhaCCBUL:INhaCCBUL
     {
         private readonly INhaCCDAL dal = new NhaCCDAL();
-        /// <param name="ETTNV">Thông tin lớp học được lấy từ tầng Presentation </param>
 
         public int Insert(ETTNhaCC ETTCC)
         {
@@ -24,10 +23,7 @@ namespace BusinessLogicLayer
             else return -1;
 
         }
-        /// <summary>
-        /// Hàm xóa thông tin lớp học khỏi CSDL với mã lớp được chỉ định từ tầng Presentation
-        /// Nếu không xóa được lớp do lớp này không tồn tại hàm trả về giá trị -1
-        /// </summary>
+        
 
 
         public int Delete(int ma_nha_cung_cap)
@@ -36,11 +32,7 @@ namespace BusinessLogicLayer
                 return dal.Delete(ma_nha_cung_cap);
             else return -1;
         }
-        /// <summary>
-        /// Hàm cập nhật lại thông tin một lớp học vào CSDL với thông tin mới được lấy từ tầng Presentation
-        /// Nếu việc cập nhật thất bại do mã lớp không tồn tại thì hàm trả về -1
-        /// </summary>
-        /// <param name="cls">Thông tin lớp mới cần được cập nhật lại vào CSDL</param>
+        
 
         public int Update(ETTNhaCC ETTCC)
         {
@@ -48,9 +40,7 @@ namespace BusinessLogicLayer
                 return dal.Update(ETTCC.Ma_nha_cung_cap, ETTCC.Ten_nha_cung_cap,Tools.ChuanHoaXau(ETTCC.Dia_chi), Tools.ChuanHoaXau(ETTCC.So_dien_thoai));
             else return -1;
         }
-        /// <summary>
-        /// Hàm trả về danh sách các lớp cóp trong CSDL
-        /// </summary>
+        
 
         public IList<ETTNhaCC> getAll()
         {
@@ -67,11 +57,7 @@ namespace BusinessLogicLayer
             }
             return list;
         }
-        /// <summary>
-        /// Hàm trả về thông tin cụ thể một lớp đã được chỉ định
-        /// Nếu mã lớp không tồn tại hàm trả về giá trị null
-        /// </summary>
-        /// <param name="ma_nhan_vien">Mã lớp</param>
+       
 
         public ETTNhaCC getNhaCC_ID(int ma_nha_cung_cap)
         {
@@ -87,29 +73,20 @@ namespace BusinessLogicLayer
             }
             else return null;
         }
-        /// <summary>
-        /// Hàm lấy về mã của bản ghi mới nhất trong bảng tbl_Classes
-        /// </summary> 
+       
         public int getNhaCCID_Last()
         {
             if (dal.getAll().Rows.Count == 0)
                 return 1;
             else return dal.getNhaCCID_Last();
         }
-        /// <summary>
-        /// Kiểm tra xem một lớp cho bởi mã lớp có trong CSDL không?
-        /// Nếu có hàm trả về giá trị khác 0 còn không có trả về giá trị bằng 0
-        /// </summary>
-        /// <param name="ma_nhan_vien">Mã lớp</param>
+        
 
         public int checkNHaCC_ID(int ma_nha_cung_cap)
         {
             return dal.checkNHaCC_ID(ma_nha_cung_cap);
         }
-        /// <summary>
-        /// Tìm kiếm thông tin lớp học 
-        /// </summary>
-        /// <param name="cls">Thông tin lớp</param> 
+        
         public IList<ETTNhaCC> Search(ETTNhaCC ETTCC)
         {
             IList<ETTNhaCC> list = getAll();
@@ -150,10 +127,7 @@ namespace BusinessLogicLayer
             else kq = null;
             return kq;
         }
-        /// <summary>
-        /// Tìm kiếm thông tin lớp học dùng Linq
-        /// </summary>
-        /// <param name="cls">Thông tin lớp</param> 
+       
         public IList<ETTNhaCC> SearchLinq(ETTNhaCC ETT)
         {
             return getAll().Where(x => (string.IsNullOrEmpty(ETT.Ten_nha_cung_cap) || x.Ten_nha_cung_cap.Contains(ETT.Ten_nha_cung_cap))
@@ -161,17 +135,6 @@ namespace BusinessLogicLayer
             && (string.IsNullOrEmpty(x.So_dien_thoai) || x.So_dien_thoai.Contains(ETT.So_dien_thoai))).ToList();
         }
 
-        public void KetXuatWord(int Ma_nha_cung_cap, string templatePath, string exportPath)
-        {
-            //ETTNhanVien NV = getClass_ID(Ma_nhan_vien);
-            //IStudentBUL std = new StudentBUL();
-            //IList<Student> list = std.getAll(Ma_nhan_vien);
-            //Dictionary<string, string> dictionaryData = new Dictionary<string, string>();
-            //dictionaryData.Add("tenlop", lop.ClassName.ToString());
-            //dictionaryData.Add("loptruong", lop.MonitorName.ToString());
-            //dictionaryData.Add("giaovien", lop.TeacherName.ToString());
-            //System.IO.File.Copy(templatePath, exportPath, true);
-            //ExportDocx.CreateClassTemplate(exportPath, dictionaryData, list);
-        }
+     
     }
 }

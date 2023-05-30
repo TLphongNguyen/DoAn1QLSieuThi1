@@ -41,11 +41,7 @@ namespace BusinessLogicLayer
             else return -1;
 
         }
-        /// <summary>
-        /// Hàm xóa thông tin lớp học khỏi CSDL với mã lớp được chỉ định từ tầng Presentation
-        /// Nếu không xóa được lớp do lớp này không tồn tại hàm trả về giá trị -1
-        /// </summary>
-        /// <param name="ma_nhan_vien">Mã lớp</param>
+       
 
         public int Delete(int IdLogin)
         {
@@ -53,11 +49,7 @@ namespace BusinessLogicLayer
                 return dal.Delete(IdLogin);
             else return -1;
         }
-        /// <summary>
-        /// Hàm cập nhật lại thông tin một lớp học vào CSDL với thông tin mới được lấy từ tầng Presentation
-        /// Nếu việc cập nhật thất bại do mã lớp không tồn tại thì hàm trả về -1
-        /// </summary>
-        /// <param name="cls">Thông tin lớp mới cần được cập nhật lại vào CSDL</param>
+        
 
         public int Update(ETTThietLap ETTTL)
         {
@@ -65,9 +57,7 @@ namespace BusinessLogicLayer
                 return dal.Update(ETTTL.idLogin, ETTTL.userName, Tools.ChuanHoaXau(ETTTL.passWords), ETTTL.Ma_nhan_vien);
             else return -1;
         }
-        /// <summary>
-        /// Hàm trả về danh sách các lớp cóp trong CSDL
-        /// </summary>
+       
 
         public IList<ETTThietLap> getAll()
         {
@@ -84,11 +74,7 @@ namespace BusinessLogicLayer
             }
             return list;
         }
-        /// <summary>
-        /// Hàm trả về thông tin cụ thể một lớp đã được chỉ định
-        /// Nếu mã lớp không tồn tại hàm trả về giá trị null
-        /// </summary>
-        /// <param name="">Mã lớp</param>
+        
 
         public ETTThietLap getLogin_ID(int IdLogin)
         {
@@ -130,29 +116,20 @@ namespace BusinessLogicLayer
             }
         }
         
-        /// <summary>
-        /// Hàm lấy về mã của bản ghi mới nhất trong bảng tbl_Classes
-        /// </summary> 
+        
         public int getLoginID_Last()
         {
             if (dal.getAll().Rows.Count == 0)
                 return 1;
             else return dal.getLoginID_Last();
         }
-        /// <summary>
-        /// Kiểm tra xem một lớp cho bởi mã lớp có trong CSDL không?
-        /// Nếu có hàm trả về giá trị khác 0 còn không có trả về giá trị bằng 0
-        /// </summary>
-        /// <param name="ma_nhan_vien">Mã lớp</param>
+       
 
         public int checkLogin_ID(int IdLogin)
         {
             return dal.checkLogin_ID(IdLogin);
         }
-        /// <summary>
-        /// Tìm kiếm thông tin lớp học 
-        /// </summary>
-        /// <param name="cls">Thông tin lớp</param> 
+        
         public IList<ETTThietLap> Search(ETTThietLap ETTTL)
         {
             IList<ETTThietLap> list = getAll();
@@ -177,10 +154,7 @@ namespace BusinessLogicLayer
             else kq = null;
             return kq;
         }
-        /// <summary>
-        /// Tìm kiếm thông tin lớp học dùng Linq
-        /// </summary>
-        /// <param name="cls">Thông tin lớp</param> 
+        
         public IList<ETTThietLap> SearchLinq(ETTThietLap ETT)
         {
             return getAll().Where(x => (string.IsNullOrEmpty(ETT.userName) || x.userName.Contains(ETT.userName))

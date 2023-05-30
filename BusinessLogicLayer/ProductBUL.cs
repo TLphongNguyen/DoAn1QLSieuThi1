@@ -101,10 +101,7 @@ namespace BusinessLogicLayer
         {
             return getAll().Where(x => (string.IsNullOrEmpty(ETT.TSP) || x.TSP.Contains(ETT.TSP))).ToList();
         }
-        public IList<dynamic> SearchLinq1(ETTProduct ETT)
-        {
-            return getAllJoin().Where(x => (string.IsNullOrEmpty(ETT.TSP) || x.TSP.Contains(ETT.TSP))).ToList();
-        }
+       
         public List<dynamic> getAllJoin()
         {
             var product_Category = (from pd in this.getAll()
